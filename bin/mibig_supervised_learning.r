@@ -4,7 +4,7 @@ pacman::p_load("caret", "cowplot", "tidymodels", "ranger", "tree", "rsample", "t
 # devtools::install_version("xgboost", version = "0.4-4", repos = "http://cran.us.r-project.org")
 
 # Set working directory
-setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build/")
+setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")
 
 ##### Reading in the data #####
 rawdat <- read_csv("data/710_seqs_1592_feats_for_supervised.csv")
