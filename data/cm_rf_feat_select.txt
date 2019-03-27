@@ -1,62 +1,45 @@
 Confusion Matrix and Statistics
 
-                           Reference
-Prediction                  aminoacid aryl longchain luciferin medianbetahydroxyacidlong mediumchain
-  aminoacid                        29    0         0         0                         0           0
-  aryl                              0   27         3         0                         0           2
-  longchain                         0    0        41         0                         0           1
-  luciferin                         0    0         0        14                         0           0
-  medianbetahydroxyacidlong         0    0         0         0                        13           0
-  mediumchain                       0    0         0         0                         0           5
-  shortchain                        0    0         0         0                         0           0
-  verylongchainbile                 0    0         0         0                         0           0
-                           Reference
-Prediction                  shortchain verylongchainbile
-  aminoacid                          0                 0
-  aryl                               2                 1
-  longchain                          5                 5
-  luciferin                          0                 0
-  medianbetahydroxyacidlong          0                 0
-  mediumchain                        0                 0
-  shortchain                        14                 0
-  verylongchainbile                  0                 3
+            Reference
+Prediction   ARYL BLS FAAL FAT LACS LUCIFERASE MACS NRPS SACS VLACSBILE
+  ARYL         29   0    2   1    4          1    0    0    1         0
+  BLS           0  12    0   0    0          0    0    0    0         0
+  FAAL          0   0    2   0    2          0    0    0    0         0
+  FAT           0   0    0   3    1          0    0    0    0         0
+  LACS          1   0    1   0   22          1    2    1    2         2
+  LUCIFERASE    0   0    0   0    0         15    0    0    0         0
+  MACS          1   0    0   0    0          0    3    0    0         0
+  NRPS          1   0    0   0    1          0    0   36    0         0
+  SACS          0   0    1   0    0          0    0    0   10         0
+  VLACSBILE     0   0    0   1    2          0    0    0    0         3
 
 Overall Statistics
                                          
-               Accuracy : 0.8848         
-                 95% CI : (0.826, 0.9292)
-    No Information Rate : 0.2667         
+               Accuracy : 0.8232         
+                 95% CI : (0.756, 0.8783)
+    No Information Rate : 0.2256         
     P-Value [Acc > NIR] : < 2.2e-16      
                                          
-                  Kappa : 0.8602         
+                  Kappa : 0.7897         
  Mcnemar's Test P-Value : NA             
 
 Statistics by Class:
 
-                     Class: aminoacid Class: aryl Class: longchain Class: luciferin
-Sensitivity                    1.0000      1.0000           0.9318          1.00000
-Specificity                    1.0000      0.9420           0.9091          1.00000
-Pos Pred Value                 1.0000      0.7714           0.7885          1.00000
-Neg Pred Value                 1.0000      1.0000           0.9735          1.00000
-Prevalence                     0.1758      0.1636           0.2667          0.08485
-Detection Rate                 0.1758      0.1636           0.2485          0.08485
-Detection Prevalence           0.1758      0.2121           0.3152          0.08485
-Balanced Accuracy              1.0000      0.9710           0.9205          1.00000
-                     Class: medianbetahydroxyacidlong Class: mediumchain Class: shortchain
-Sensitivity                                   1.00000            0.62500           0.66667
-Specificity                                   1.00000            1.00000           1.00000
-Pos Pred Value                                1.00000            1.00000           1.00000
-Neg Pred Value                                1.00000            0.98125           0.95364
-Prevalence                                    0.07879            0.04848           0.12727
-Detection Rate                                0.07879            0.03030           0.08485
-Detection Prevalence                          0.07879            0.03030           0.08485
-Balanced Accuracy                             1.00000            0.81250           0.83333
-                     Class: verylongchainbile
-Sensitivity                           0.33333
-Specificity                           1.00000
-Pos Pred Value                        1.00000
-Neg Pred Value                        0.96296
-Prevalence                            0.05455
-Detection Rate                        0.01818
-Detection Prevalence                  0.01818
-Balanced Accuracy                     0.66667
+                     Class: ARYL Class: BLS Class: FAAL Class: FAT Class: LACS Class: LUCIFERASE Class: MACS Class: NRPS Class: SACS
+Sensitivity               0.9062    1.00000     0.33333    0.60000      0.6875           0.88235     0.60000      0.9730     0.76923
+Specificity               0.9318    1.00000     0.98734    0.99371      0.9242           1.00000     0.99371      0.9843     0.99338
+Pos Pred Value            0.7632    1.00000     0.50000    0.75000      0.6875           1.00000     0.75000      0.9474     0.90909
+Neg Pred Value            0.9762    1.00000     0.97500    0.98750      0.9242           0.98658     0.98750      0.9921     0.98039
+Prevalence                0.1951    0.07317     0.03659    0.03049      0.1951           0.10366     0.03049      0.2256     0.07927
+Detection Rate            0.1768    0.07317     0.01220    0.01829      0.1341           0.09146     0.01829      0.2195     0.06098
+Detection Prevalence      0.2317    0.07317     0.02439    0.02439      0.1951           0.09146     0.02439      0.2317     0.06707
+Balanced Accuracy         0.9190    1.00000     0.66034    0.79686      0.8059           0.94118     0.79686      0.9786     0.88130
+                     Class: VLACSBILE
+Sensitivity                   0.60000
+Specificity                   0.98113
+Pos Pred Value                0.50000
+Neg Pred Value                0.98734
+Prevalence                    0.03049
+Detection Rate                0.01829
+Detection Prevalence          0.03659
+Balanced Accuracy             0.79057

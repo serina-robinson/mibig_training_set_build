@@ -1,0 +1,159 @@
+LOCUS       NZ_LZKQ01000003         2134 bp    DNA     linear   CON 05-APR-2017
+DEFINITION  Mycobacterium asiaticum strain 1081914.2 contig_100, whole genome
+            shotgun sequence.
+ACCESSION   NZ_LZKQ01000003
+VERSION     NZ_LZKQ01000003
+KEYWORDS    .
+SOURCE      Mycobacterium asiaticum
+  ORGANISM  Mycobacterium asiaticum
+            Bacteria; Actinobacteria; Corynebacteriales; Mycobacteriaceae;
+            Mycobacterium.
+FEATURES             Location/Qualifiers
+     gene            complement(<1..1857)
+                     /locus_tag="A9X01_RS00100"
+                     /old_locus_tag="A9X01_08580"
+                     /pseudo=""
+     CDS             complement(<1..1857)
+                     /locus_tag="A9X01_RS00100"
+                     /old_locus_tag="A9X01_08580"
+                     /inference="COORDINATES: similar to AA
+                     sequence:RefSeq:WP_015355955.1"
+                     /note="incomplete; too short partial abutting assembly gap;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /note="smCOG:
+                     SMCOG1021:malonyl_CoA-acyl_carrier_protein_transacylase
+                     (Score: 212.2; E-value: 2.5e-64);"
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="polyketide synthase"
+                     /translation="LHRPSGDSARLGSADVDLVEGHGTGTTLGDPIEAQALLATYGQDR
+                     PADRPLWLGSIKSNMGHTSAAAGMAGVMKMALAMRHEVMPKTLHVDSPTPHVDWSAGAV
+                     SLLTEARPWPPHQRPRRAGVSSFGISGTNAHVILEQGPPAAAATPAERDTNTPTAWVLS
+                     ARSPAALTGQAQRLLTRVTDDPELDPIDVGWSLATTRSAFEHRAVIVGAGRAQLVAGLS
+                     ELAAGEPAAGVVVGRTGHAADRTVFVFPGQGSQWVGMGVELLDDSTVFADHMRLCEKAL
+                     GEYFGWSLTDVLRGVPGAPGLDRVDVIQPVLWAVMVSLAELWRSVGVVPDAVIGHSQGE
+                     IAAAYVAGALSLEDAARVVALRSQLLAQLSGAGGMVSLACGLQRTEELLTGFGDRLGIA
+                     AINGISAVVVSGELAALDELERRCEAESVRARRIEVDYASHSAQIDRIREPLIQALSGI
+                     AGRSAPVAFFSTVAGELMDTAALTADYWYQSVRQTVQFDRAVRAAATAGHRVFIESSPH
+                     PVLIAGIEETVPDAAVIPSLGRDDGGPTRFLLSIGQANVAGVQVDWRSVCAGGRRVDLP
+                     TYAFQRRRFWLGGGSTAADADGLGVAGAGHAMLGAVVERPDGG"
+                     /sec_met="Type: t1pks"
+                     /sec_met="Domains detected: PKS_AT (E-value: 2.1e-106,
+                     bitscore: 342.7, seeds: 1682); mod_KS (E-value: 4.3e-72,
+                     bitscore: 230.3, seeds: 217)"
+                     /sec_met="Kind: biosynthetic"
+     source          1..2134
+                     /organism="Mycobacterium asiaticum"
+                     /mol_type="genomic DNA"
+                     /strain="1081914.2"
+                     /db_xref="taxon:1790"
+                     /country="Mozambique"
+                     /lat_lon="25.406 S 32.807 E"
+                     /collection_date="23-Mar-2015"
+                     /collected_by="Alberto L Garcia-Basteiro, Elisa
+                     Lopez-Varela, Silvia Blanco"
+     cluster         1..2134
+                     /note="Cluster number: 1"
+                     /note="Detection rule(s) for this cluster type: t1pks:
+                     ((PKS_KS & PKS_AT) or (ene_KS & PKS_AT) or (mod_KS &
+                     PKS_AT) or (hyb_KS & PKS_AT) or (itr_KS & PKS_AT) or
+                     (tra_KS & PKS_AT));"
+                     /cutoff=20000
+                     /extension=20000
+                     /product="t1pks"
+                     /contig_edge="True"
+                     /knownclusterblast="1. BGC0000051_c1	Ebelactone (50% of
+                     genes show similarity)"
+                     /knownclusterblast="2. BGC0000142_c1	Salinilactam (50% of
+                     genes show similarity)"
+                     /knownclusterblast="3. BGC0000050_c1	E-837 (50% of genes
+                     show similarity)"
+                     /knownclusterblast="4. BGC0001004_c1	Lobophorin (50% of
+                     genes show similarity)"
+                     /knownclusterblast="5. BGC0001065_c1	Herboxidiene (30% of
+                     genes show similarity)"
+                     /knownclusterblast="6. BGC0001046_c1	Streptolydigin (30% of
+                     genes show similarity)"
+                     /knownclusterblast="7. BGC0001183_c1	Lobophorin (40% of
+                     genes show similarity)"
+                     /knownclusterblast="8. BGC0000049_c2	E-492 / E-975 (20% of
+                     genes show similarity)"
+                     /knownclusterblast="9. BGC0000060_c1	Fostriecin (20% of
+                     genes show similarity)"
+                     /knownclusterblast="10. BGC0000041_c1	Coronafacic acid (20%
+                     of genes show similarity)"
+     misc_feature    complement(775..777)
+                     /note="tta leucine codon, possible target for bldA
+                     regulation"
+                     /tool="antiSMASH"
+     gene            1763..2134
+                     /locus_tag="A9X01_RS00105"
+                     /old_locus_tag="A9X01_08585"
+     CDS             1763..2134
+                     /locus_tag="A9X01_RS00105"
+                     /old_locus_tag="A9X01_08585"
+                     /inference="COORDINATES: protein motif:HMM:PF02801.20"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /note="smCOG: SMCOG1022:Beta-ketoacyl_synthase (Score:
+                     61.6; E-value: 1.2e-18);"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="WP_081282124.1"
+                     /translation="MGSPSVVPVPCPSTRSTSADPSRALSPDGRCKAYAGAADGTGFSE
+                     GAGALVVERLADAQRLGHPVLALIRGSAVNQDGASNGLATPNGPSQQRVIRAALASAQP
+                     TSIGSSSGSSVTRVSSRCA"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: PKS_KS (E-value: 1.9e-33,
+                     bitscore: 103.1, seeds: 2284); mod_KS (E-value: 1.5e-41,
+                     bitscore: 129.6, seeds: 217); hyb_KS (E-value: 1.1e-33,
+                     bitscore: 103.7, seeds: 33); itr_KS (E-value: 2.7e-23,
+                     bitscore: 69.5, seeds: 96); tra_KS (E-value: 1.1e-25,
+                     bitscore: 77.4, seeds: 44); PKS_KS (E-value: 1.9e-33,
+                     bitscore: 103.1, seeds: 2284); mod_KS (E-value: 1.5e-41,
+                     bitscore: 129.6, seeds: 217); hyb_KS (E-value: 1.1e-33,
+                     bitscore: 103.7, seeds: 33); itr_KS (E-value: 2.7e-23,
+                     bitscore: 69.5, seeds: 96); tra_KS (E-value: 1.1e-25,
+                     bitscore: 77.4, seeds: 44)"
+                     /sec_met="Kind: biosynthetic"
+ORIGIN
+        1 tccgccatcg gggcgctcca ccaccgcccc caacattgca tgcccggcgc cggccactcc
+       61 gaggccgtcg gcgtcggcgg cggtggatcc gccgcccaac cagaatcgcc gtcgctggaa
+      121 ggcgtacgtg ggaaggtcga cgcggcgccc acccgcacat accgaccgcc aatccacctg
+      181 cacgccggcg acattggcct gaccgatcga cagcaggaac ctcgttggcc cgccgtcgtc
+      241 gcgcccgagg gaagggataa cggcggcatc cgggacggtc tcttcgattc cggcgatcaa
+      301 caccgggtgc ggactggatt cgatgaacac ccgatggccc gccgtggcgg cggcgcgcac
+      361 cgcccggtcg aattgcaccg tctggcgcac actttggtac cagtagtcgg cggtcagtgc
+      421 ggcggtgtcc atcaattcac cggcgacagt agagaagaac gccaccggtg cggagcggcc
+      481 agcgataccg gacagcgctt ggatcaatgg ctcacggata cggtcgatct gcgcggaatg
+      541 cgaggcatag tcgacttcga tcctgcgcgc gcgaacgctt tctgcctcgc accgccgctc
+      601 caactcgtcc agagccgcca actcaccgct gacgaccact gccgaaatac cgttgatcgc
+      661 agcgataccc aaccggtcac cgaatccggt caacagctcc tcggtgcgtt gcaggccgca
+      721 tgccagcgat accatgccgc cggcgcccga aagttgtgcc agcaattggc ttcgtaacgc
+      781 caccaccctc gcggcgtcct ccaaagacag cgcgccggcg acgtatgcgg cggcgatctc
+      841 accctgggag tgtccgatga ccgcgtcggg caccacaccg accgaacgcc acaactcggc
+      901 cagcgacacc attaccgccc atagcaccgg ctgaatcacg tccacccggt ccagcccggg
+      961 ggcgcccggg actccccgca gcacatcggt caacgaccag ccgaagtatt cgccgagcgc
+     1021 tttctcacaa agccgcatgt ggtcggcgaa aaccgttgag tcgtccaaaa gttcaacgcc
+     1081 catgccgacc cactgggaac cttgacccgg gaagacgaac acggttcggt cggcggcatg
+     1141 gcccgtacgg ccgaccacga caccggctgc cggttcgcct gcggcgagct cgctcagccc
+     1201 ggcaaccagc tgcgcgcggc ccgccccgac aatgacggca cggtgctcga acgccgaccg
+     1261 cgtcgtggcc agcgaccagc cgacgtcgat cggatccagc tccgggtcgt cggttacccg
+     1321 agtgagcagt cgctgtgcct gaccggtcag cgcggccggg gagcgggcgg acagtaccca
+     1381 cgcggtgggc gtgttcgtat cccgctcggc aggcgttgcc gccgccgcgg gcggcccctg
+     1441 ttcgaggatc acgtgcgcgt tcgtcccgct gattccgaac gacgagacac ccgcccgccg
+     1501 ggggcgttga tgcggcggcc aaggccttgc ctcggtaagc aacgacaccg cgcccgcgga
+     1561 ccaatccaca tgcggcgtag gcgaatccac gtgcaaggtc ttgggcatca cctcgtggcg
+     1621 catcgccagc gccatcttca tgaccccggc cattcccgcc gccgccgagg tatgtcccat
+     1681 gttcgatttg atcgaaccca gccacaacgg ccgatcggca ggccggtcct gcccgtaggt
+     1741 cgccaacaac gcttgggcct cgatgggatc cccgagcgtg gtcccggtac cgtgcccctc
+     1801 gaccagatcg acgtcagccg atcccagccg ggcgctgtcg cccgacgggc ggtgcaaggc
+     1861 ctatgcgggc gccgcggacg gcaccgggtt ctccgagggc gcgggcgcac tggtcgtcga
+     1921 gcggctggcc gacgcacagc gcctcggcca tccggtgctg gccctgatcc gcgggtcggc
+     1981 ggtcaatcag gacggcgcat cgaacggtct ggcgaccccg aatggcccct cgcaacaacg
+     2041 ggtgatccgg gcggcgctgg ccagcgccca gccgacgtcg atcggatcca gctccgggtc
+     2101 gtcggttacc cgagtgagca gtcgctgtgc ctga
+//

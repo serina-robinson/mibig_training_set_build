@@ -23,25 +23,30 @@ mibig <- rawdat %>%
   mutate(sqnams_tr = str_replace_all(sqnams_tr, "\\.", "_"))
 
 # Read in the UniPROT KB training data
-# uniprot <- read_csv("data/anl_training_set_updated_20190215_fixnams.csv") %>%
-#   dplyr::filter(!grepl("coelente", substrate)) %>%
-#   mutate(functional_class = str_replace_all(functional_class, "MMCS", "SACS")) %>%
-#   mutate(sqnams_tr = paste0(1:nrow(.), "_", org_short, "_", substrate_group, "_", functional_class))
-# uniprot$sqnams_tr  
+uniprot <- read_csv("data/anl_training_set_updated_20190215_fixnams.csv") %>%
+  dplyr::filter(!grepl("coelente", substrate)) %>%
+  mutate(functional_class = str_replace_all(functional_class, "MMCS", "SACS")) %>%
+  mutate(sqnams_tr = paste0(1:nrow(.), "_", org_short, "_", substrate_group, "_", functional_class))
+uniprot$sqnams_tr
 
 # Combine the MIBiG and the UNIPROT
-uniprot <- read_excel('data/anl_training_set_updated_20190215.xlsx')
+# uniprot <- read_excel('data/anl_training_set_updated_20190215.xlsx')
 dat <- uniprot %>%
   dplyr::mutate(likely_substrate = substrate) %>%
   dplyr::mutate(pmid = pub_med_id) %>%
   bind_rows(., mibig) %>%
   dplyr::select(entry_name, organism, protein_names, likely_substrate, substrate_group, functional_class,
-                bgcs, pmid, cmpnd, pdb_id, kinetics, ec_numbers, title, aa_seq) #%>%
+                bgcs, pmid, cmpnd, pdb_id, kinetics, ec_numbers, title, sqnams_tr, aa_seq) #%>%
 
-colnames(uniprot)
-colnames(mibig)
-write_csv(dat, "data/20190318_full_anl_training_set.csv")
-write_csv(dat, "../pallas/shiny_app/data/20190318_full_anl_training_set.csv")
+dat_seqs <- AAStringSet(dat$aa_seq)
+names(dat_seqs) <- paste0(dat$likely_substrate, "_", dat$sqnams_tr)
+names(dat_seqs)
+length(dat_seqs)
+# writeXStringSet(dat_seqs, 'data/614_sqnamstr_with_substrate.fa')
+
+# write_csv(dat, "data/20190318_full_anl_training_set.csv")
+
+# write_csv(dat, "../pallas/shiny_app/data/20190318_full_anl_training_set.csv")
 
 #  dplyr::filter(!functional_class %in% c("PEPTIDE", "CAR"))
 colnames(dat)

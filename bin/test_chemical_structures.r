@@ -72,6 +72,8 @@ colnames(final_df)
 colnames(final_df)[1] <- "cid"
 final_df <- final_df %>%
   mutate(cid = as.numeric(cid))
+
+final_df
 final_df$cid
 # write_delim(data.frame(final_df$cid), "data/all_cids_output.txt", delim = "\t", col_names = F)
 final_df <- read_delim("data/all_cids_output.txt", delim = "\t", col_names = F)
@@ -112,10 +114,13 @@ apset@ID <- gsub("1$", "", apset@ID)
 # # fpset2 <- desc2fp(apset2)
 
 
-clusters <- cmp.cluster(db=apset, cutoff = 1, save.distances = "data/distmat.rda")
+clusters <- cmp.cluster(db=apset,  cutoff=0.41, save.distances = "data/distmat.rda")
 head(clusters)
+write_csv(clusters, "output/tanimoto_clusters.csv")
 cluster.sizestat(clusters) # 56, 25 ,2
-clusviz <- cluster.visualize(apset, clusters, size.cutoff=1, quiet = TRUE)
+
+
+clusviz <- cluster.visualize(apset, clusters, size.cutoff = 1, quiet = TRUE)
 x <- clusviz[,1]
 y <- clusviz[,2]
 trdat <- data.frame(cbind(x,y))

@@ -1,0 +1,96 @@
+Confusion Matrix and Statistics
+
+                                            Reference
+Prediction                                   amino.acid aryl.and.biaryl.derivatives C13.C17 C18.and.up.or.bile.acid C2.C4 C5.C8
+  amino.acid                                         42                           0       1                       0     0     2
+  aryl.and.biaryl.derivatives                         0                           6       0                       0     0     0
+  C13.C17                                             0                           2      29                       6     4     5
+  C18.and.up.or.bile.acid                             0                           0       0                       5     0     0
+  C2.C4                                               0                           0       1                       0    16     0
+  C5.C8                                               0                           0       0                       0     0     0
+  C9.C12                                              0                           0       1                       0     0     0
+  cinnamate.and.succinylbenzoate.derivatives          0                           0       0                       0     0     0
+  luciferin                                           0                           0       0                       0     1     0
+  malonate.derivatives                                0                           0       0                       0     0     0
+  median.beta.hydroxyacid                             0                           0       0                       0     0     0
+  phenylacetate                                       0                           0       0                       0     0     0
+  salicylic.acid.derivatives                          1                           0       0                       0     0     0
+                                            Reference
+Prediction                                   C9.C12 cinnamate.and.succinylbenzoate.derivatives luciferin malonate.derivatives
+  amino.acid                                      0                                          0         0                    0
+  aryl.and.biaryl.derivatives                     0                                          0         0                    0
+  C13.C17                                         3                                          1         0                    2
+  C18.and.up.or.bile.acid                         0                                          0         0                    0
+  C2.C4                                           1                                          0         0                    1
+  C5.C8                                           0                                          0         0                    0
+  C9.C12                                          2                                          0         0                    0
+  cinnamate.and.succinylbenzoate.derivatives      0                                          3         0                    0
+  luciferin                                       0                                          0        11                    0
+  malonate.derivatives                            0                                          0         0                    0
+  median.beta.hydroxyacid                         0                                          0         0                    0
+  phenylacetate                                   0                                          0         0                    0
+  salicylic.acid.derivatives                      0                                          0         0                    0
+                                            Reference
+Prediction                                   median.beta.hydroxyacid phenylacetate salicylic.acid.derivatives
+  amino.acid                                                       0             1                          0
+  aryl.and.biaryl.derivatives                                      0             0                          0
+  C13.C17                                                          0             0                          0
+  C18.and.up.or.bile.acid                                          0             0                          0
+  C2.C4                                                            0             0                          0
+  C5.C8                                                            0             0                          0
+  C9.C12                                                           0             0                          0
+  cinnamate.and.succinylbenzoate.derivatives                       0             0                          0
+  luciferin                                                        0             0                          0
+  malonate.derivatives                                             0             0                          0
+  median.beta.hydroxyacid                                         18             0                          0
+  phenylacetate                                                    0             0                          0
+  salicylic.acid.derivatives                                       0             0                          9
+
+Overall Statistics
+                                          
+               Accuracy : 0.8103          
+                 95% CI : (0.7441, 0.8657)
+    No Information Rate : 0.2471          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.7753          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: amino.acid Class: aryl.and.biaryl.derivatives Class: C13.C17 Class: C18.and.up.or.bile.acid
+Sensitivity                     0.9767                            0.75000         0.9062                        0.45455
+Specificity                     0.9695                            1.00000         0.8380                        1.00000
+Pos Pred Value                  0.9130                            1.00000         0.5577                        1.00000
+Neg Pred Value                  0.9922                            0.98810         0.9754                        0.96450
+Prevalence                      0.2471                            0.04598         0.1839                        0.06322
+Detection Rate                  0.2414                            0.03448         0.1667                        0.02874
+Detection Prevalence            0.2644                            0.03448         0.2989                        0.02874
+Balanced Accuracy               0.9731                            0.87500         0.8721                        0.72727
+                     Class: C2.C4 Class: C5.C8 Class: C9.C12 Class: cinnamate.and.succinylbenzoate.derivatives Class: luciferin
+Sensitivity               0.76190      0.00000       0.33333                                           0.75000          1.00000
+Specificity               0.98039      1.00000       0.99405                                           1.00000          0.99387
+Pos Pred Value            0.84211          NaN       0.66667                                           1.00000          0.91667
+Neg Pred Value            0.96774      0.95977       0.97661                                           0.99415          1.00000
+Prevalence                0.12069      0.04023       0.03448                                           0.02299          0.06322
+Detection Rate            0.09195      0.00000       0.01149                                           0.01724          0.06322
+Detection Prevalence      0.10920      0.00000       0.01724                                           0.01724          0.06897
+Balanced Accuracy         0.87115      0.50000       0.66369                                           0.87500          0.99693
+                     Class: malonate.derivatives Class: median.beta.hydroxyacid Class: phenylacetate
+Sensitivity                              0.00000                         1.0000             0.000000
+Specificity                              1.00000                         1.0000             1.000000
+Pos Pred Value                               NaN                         1.0000                  NaN
+Neg Pred Value                           0.98276                         1.0000             0.994253
+Prevalence                               0.01724                         0.1034             0.005747
+Detection Rate                           0.00000                         0.1034             0.000000
+Detection Prevalence                     0.00000                         0.1034             0.000000
+Balanced Accuracy                        0.50000                         1.0000             0.500000
+                     Class: salicylic.acid.derivatives
+Sensitivity                                    1.00000
+Specificity                                    0.99394
+Pos Pred Value                                 0.90000
+Neg Pred Value                                 1.00000
+Prevalence                                     0.05172
+Detection Rate                                 0.05172
+Detection Prevalence                           0.05747
+Balanced Accuracy                              0.99697

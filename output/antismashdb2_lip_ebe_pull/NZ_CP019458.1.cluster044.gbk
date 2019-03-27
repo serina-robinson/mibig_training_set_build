@@ -1,0 +1,1235 @@
+LOCUS       NZ_CP019465            15591 bp    DNA     linear   CON 11-APR-2018
+DEFINITION  Streptomyces autolyticus strain CGMCC0516 plasmid unnamed8, complete
+            sequence.
+ACCESSION   NZ_CP019465
+VERSION     NZ_CP019465.1
+KEYWORDS    .
+SOURCE      Streptomyces autolyticus
+  ORGANISM  Streptomyces autolyticus
+            Bacteria; Actinobacteria; Streptomycetales; Streptomycetaceae;
+            Streptomyces.
+FEATURES             Location/Qualifiers
+     source          1..15591
+                     /organism="Streptomyces autolyticus"
+                     /mol_type="genomic DNA"
+                     /strain="CGMCC0516"
+                     /isolation_source="soil sample"
+                     /culture_collection="CGMCC:0516"
+                     /db_xref="taxon:75293"
+                     /plasmid="unnamed8"
+                     /country="China:Yunnan"
+                     /collection_date="1998-01-01"
+     gene            join(15483..15591,1..>1343)
+                     /locus_tag="BV401_RS42605"
+                     /pseudo=""
+                     /db_xref="GeneID:36392519"
+     CDS             join(15483..15591,1..>1343)
+                     /locus_tag="BV401_RS42605"
+                     /inference="COORDINATES: protein motif:HMM:PF08659.8"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /db_xref="GeneID:36392519"
+                     /translation="LRWLLCRVRLCGLRRPGWRLGLFFRGCGVRGGVLVRLFAAVGLPA
+                     GARARAGPFGLPPALFAAALPALGVRGALAGGSGRLLPFSWRGFALAAVGAPSLRVRLA
+                     SVGAGSAAVSVLVGAASGRGVASVASLVLRPVAAAPLPAVGGAARAGLFRVAWVAAPGA
+                     VAAGGAVASRPAVVRVVSAGPAVVGAVSGRVLAVLARVRAWVAAAALAGARLVVVPRGA
+                     VAAGAGVAALAGAAVWGLVRSAPSAPPGRLVLVAPAAVAGVGGVLPGVLALGAAPVVVR
+                     SGVVRVPRLGRVRVSGAVSGGFGSGAVLVPGGPGVLGGVVSRPLVVRPGVRRLVLLSRR
+                     GAAAAGAAALRAALAGAGAAVVLAACAAAAGAALAGVLSGLPAGFALRGVVPAAGVLAA
+                     GLLPSLPRARVAPVLRAPVAAAWPLPALPAGLALSAFVLFSSAPGVLGGAGPRPSAAAP
+                     VFLAGLASWRRAPGLPGVSLAWGLWA"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: adh_short (E-value: 1.3e-32,
+                     bitscore: 102.6, seeds: 230)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KR (305-484). E-value:
+                     2.6e-30. Score: 97.3; Predicted KR activity: inactive;
+                     Predicted KR stereochemistry: C1;"
+     cluster         1..15591
+                     /note="Cluster number: 44"
+                     /note="Detection rule(s) for this cluster type: t1pks:
+                     ((PKS_KS & PKS_AT) or (ene_KS & PKS_AT) or (mod_KS &
+                     PKS_AT) or (hyb_KS & PKS_AT) or (itr_KS & PKS_AT) or
+                     (tra_KS & PKS_AT));"
+                     /note="Monomers prediction: (pk) + (pk)"
+                     /note="Structure image: structures/genecluster44.png"
+                     /cutoff=20000
+                     /extension=20000
+                     /product="t1pks"
+                     /contig_edge="True"
+                     /clusterblast="1. FM173265_c1	Streptomyces lasaliensis
+                     lasalocid biosynthetic gene cluster, ... (16% of genes show
+                     similarity)"
+                     /clusterblast="2. DQ149987_c1	Streptomyces neyagawaensis
+                     concanamycin A biosynthetic gene cl... (14% of genes show
+                     similarity)"
+                     /clusterblast="3. AB449340_c1	Streptomyces lasaliensis
+                     plasmid pKSL polyether antibiotic las... (16% of genes show
+                     similarity)"
+                     /clusterblast="4. HE804045_c20	Saccharothrix espanaensis
+                     DSM 44229 complete genome. (23% of genes show similarity)"
+                     /clusterblast="5. CP002994_c15	Streptomyces violaceusniger
+                     Tu 4113, complete genome. (21% of genes show similarity)"
+                     /clusterblast="6. CP006567_c4	Streptomyces rapamycinicus
+                     NRRL 5491 genome. (28% of genes show similarity)"
+                     /clusterblast="7. CP002994_c34	Streptomyces violaceusniger
+                     Tu 4113, complete genome. (23% of genes show similarity)"
+                     /clusterblast="8. CP006567_c25	Streptomyces rapamycinicus
+                     NRRL 5491 genome. (23% of genes show similarity)"
+                     /clusterblast="9. BBNO01000003_c1	Streptomyces sp. NBRC
+                     110027 DNA, contig: TPA059803, whole... (19% of genes show
+                     similarity)"
+                     /clusterblast="10. CP003987_c15	Streptomyces sp. 769,
+                     complete genome. (19% of genes show similarity)"
+                     /knownclusterblast="1. BGC0000052_c1	ECO-02301 (32% of
+                     genes show similarity)"
+                     /knownclusterblast="2. BGC0000021_c1	Apoptolidin (25% of
+                     genes show similarity)"
+                     /knownclusterblast="3. BGC0001013_c1	Meridamycin (14% of
+                     genes show similarity)"
+                     /knownclusterblast="4. BGC0000117_c1	Oligomycin (25% of
+                     genes show similarity)"
+                     /knownclusterblast="5. BGC0000116_c1	Nystatin-like
+                     Pseudonocardia polyene (14% of genes show similarity)"
+                     /knownclusterblast="6. BGC0001011_c1	Meridamycin (14% of
+                     genes show similarity)"
+                     /knownclusterblast="7. BGC0000051_c1	Ebelactone (17% of
+                     genes show similarity)"
+                     /knownclusterblast="8. BGC0001012_c1	Meridamycin (10% of
+                     genes show similarity)"
+                     /knownclusterblast="9. BGC0000115_c1	Nystatin (17% of genes
+                     show similarity)"
+                     /knownclusterblast="10. BGC0000035_c1	Chalcomycin (14% of
+                     genes show similarity)"
+     aSDomain        916..1452
+                     /domain="PKS_KR"
+                     /locus_tag="BV401_RS42605"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="2.60E-30"
+                     /score="97.3"
+                     /translation="RRPRVRRRCGRRWRGRVLRWCSRRVLPRLVRLWPGCCRGCRRVLR
+                     SVVWCLRRVCWLPGCCRRCRVRGLRRCCGRRWPLRGLCLRCRRGWLCRRSCCSRRPLVC
+                     WVVPGRAPPRLRLCSWLVSPRGGGRRGCRVCRWRGVCGPRPVACPAPSARPPSRASPAR
+                     ACCRWPRPRALRCSPP"
+                     /label="BV401_RS42605_KR1"
+                     /asDomain_id="nrpspksdomains_BV401_RS42605_KR1"
+                     /specificity="KR activity: inactive"
+                     /specificity="KR stereochemistry: C1"
+     CDS_motif       922..1020
+                     /note="NRPS/PKS Motif: PKSI-KR_m1 (e-value: 0.00039,
+                     bit-score: 13.1)"
+                     /locus_tag="BV401_RS42605"
+                     /motif="PKSI-KR_m1"
+                     /database="abmotifs"
+                     /evalue="3.90E-04"
+                     /asDomain_id="nrpspksmotif_BV401_RS42605_0001"
+                     /detection="hmmscan"
+                     /score="13.1"
+                     /aSTool="pksnrpsmotif"
+                     /translation="PRVRRRCGRRWRGRVLRWCSRRVLPRLVRLWPG"
+                     /label="PKSI-KR_m1"
+     CDS_motif       1303..1407
+                     /note="NRPS/PKS Motif: PKSI-KR_m4 (e-value: 7.1e-05,
+                     bit-score: 15.3)"
+                     /locus_tag="BV401_RS42605"
+                     /motif="PKSI-KR_m4"
+                     /database="abmotifs"
+                     /evalue="7.10E-05"
+                     /asDomain_id="nrpspksmotif_BV401_RS42605_0002"
+                     /detection="hmmscan"
+                     /score="15.3"
+                     /aSTool="pksnrpsmotif"
+                     /translation="RGCRVCRWRGVCGPRPVACPAPSARPPSRASPARA"
+                     /label="PKSI-KR_m4"
+     gene            2486..>3094
+                     /locus_tag="BV401_RS41140"
+                     /pseudo=""
+                     /db_xref="GeneID:34075744"
+     CDS             2486..>3094
+                     /locus_tag="BV401_RS41140"
+                     /inference="COORDINATES: protein motif:HMM:PF02801.20"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /note="smCOG: SMCOG1022:Beta-ketoacyl_synthase (Score:
+                     51.9; E-value: 9.9e-16);"
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /db_xref="GeneID:34075744"
+                     /translation="VLVVAGRAAPRGPGAAPGRVRLGARRWRAGAVPPAGLVAFRRPRA
+                     LSAAGPCPAFRPAAAGFGFAAGVGLLLVARLSAARRPGPAVLALVRGSAVPPAGASPGL
+                     PAPPGPSPPRVLRAALPPARLSGAAVAAVAAPGPGPSLGAPLAAPALLAPSGPARPPAP
+                     PLWLGSVPSPLGPSPAAAGVAGVLPLVLALRPGVLPPSLP"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: PKS_KS (E-value: 4.6e-33,
+                     bitscore: 104.1, seeds: 2284); mod_KS (E-value: 5.8e-49,
+                     bitscore: 156.4, seeds: 217); hyb_KS (E-value: 1.5e-34,
+                     bitscore: 108.9, seeds: 33); itr_KS (E-value: 2.2e-24,
+                     bitscore: 75.3, seeds: 96); tra_KS (E-value: 9.5e-25,
+                     bitscore: 76.6, seeds: 44); PKS_KS (E-value: 4.6e-33,
+                     bitscore: 104.1, seeds: 2284); mod_KS (E-value: 5.8e-49,
+                     bitscore: 156.4, seeds: 217); hyb_KS (E-value: 1.5e-34,
+                     bitscore: 108.9, seeds: 33); itr_KS (E-value: 2.2e-24,
+                     bitscore: 75.3, seeds: 96); tra_KS (E-value: 9.5e-25,
+                     bitscore: 76.6, seeds: 44)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KS (32-202). E-value:
+                     2.1e-32. Score: 104.1;"
+                     /aSProdPred=""
+     aSDomain        2582..3091
+                     /domain="PKS_KS"
+                     /locus_tag="BV401_RS41140"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="2.10E-32"
+                     /score="104.1"
+                     /translation="PPAGLVAFRRPRALSAAGPCPAFRPAAAGFGFAAGVGLLLVARLS
+                     AARRPGPAVLALVRGSAVPPAGASPGLPAPPGPSPPRVLRAALPPARLSGAAVAAVAAP
+                     GPGPSLGAPLAAPALLAPSGPARPPAPPLWLGSVPSPLGPSPAAAGVAGVLPLVLALRP
+                     GVLPPSL"
+                     /asDomain_id="nrpspksdomains_BV401_RS41140_Xdom01"
+                     /aSASF_scaffold="Scaffold coordinates:
+                     (47,50,51,52,53,56,57,60,106,110,117,123); scaffold
+                     residues: (A,G,P,G,P,G,A,A,P,G,G,P); expected:
+                     (E,G,T,G,T,G,D,E,K,G,G,K); matchArray:
+                     (False,True,False,True,False,True,False,False,False,True,Tr
+                     ue,False); emission probability array
+                     (n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d
+                     .); overall match: FALSE"
+                     /aSASF_choice="Description: Active site his, choice result:
+                     Active site histidines found, choice coordinates: (49,111);
+                     residues: (P,P); expected for choice: (H,H); matchArray:
+                     (False,False); emission probability array (n.d.,n.d.);
+                     overall match: FALSE"
+                     /aSASF_note="ASF analyisis with definition ASP_KS_C (type
+                     active_site_toCorrect)"
+     gene            3030..>4316
+                     /locus_tag="BV401_RS41145"
+                     /pseudo=""
+                     /db_xref="GeneID:34075743"
+     CDS             3030..>4316
+                     /locus_tag="BV401_RS41145"
+                     /inference="COORDINATES: protein motif:HMM:PF00698.19"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /note="smCOG:
+                     SMCOG1021:malonyl_CoA-acyl_carrier_protein_transacylase
+                     (Score: 88.3; E-value: 1.98e-28);"
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="polyketide synthase"
+                     /db_xref="GeneID:34075743"
+                     /translation="VWPVSSRWCWRCGPACCRRRCPSLRRPRPWPGRRAPSRCSPRPPP
+                     GRRRPPAPRRRVVLRRARAPSPALLAPAPAVAAAAAAAAAAVGGPVAWLVSGRRPAGLR
+                     APAARLRAFVLARPALAAAAVAFSLVPSRSVFAPRGVVPGAARAPLLARLGALAGAAVA
+                     SGVPRGVAAARGRSVFVFPGPGAPWLGLAVGLLASSPVFAAALGACAPALSASVAWSLP
+                     AVLRGGAGAPGFARVAVVPPVLFAVLVSLAPLWRSVGVAPAAVLGPRPGALAAACVAGA
+                     LSLAAAAPVVALRSPALAAGLAGPGGLVSVGLSAARAPARLAAWAGALSVAAVPGPGSV
+                     VVSGAPGALAALVAALAGAAVRVRRVPVASASPSAPVAGLRAALLRVLAALAPRSSAVP
+                     FSSPVSGALVAPAGLAAASWSRPLRPPVAL"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: PKS_AT (E-value: 6.9e-57,
+                     bitscore: 182.5, seeds: 1682); PKS_AT (E-value: 6.9e-57,
+                     bitscore: 182.5, seeds: 1682)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_AT (179-427). E-value:
+                     3.2e-56. Score: 182.5; Substrate specificity predictions:
+                     N/A (PKS signature), mmal (Minowa), pk (consensus);"
+                     /aSProdPred="pk"
+     CDS_motif       3282..3320
+                     /note="NRPS/PKS Motif: PKSI-AT-M_m5 (e-value: 3.6,
+                     bit-score: 1.5)"
+                     /locus_tag="BV401_RS41145"
+                     /motif="PKSI-AT-M_m5"
+                     /database="abmotifs"
+                     /evalue="3.60E+00"
+                     /asDomain_id="nrpspksmotif_BV401_RS41145_0001"
+                     /detection="hmmscan"
+                     /score="1.5"
+                     /aSTool="pksnrpsmotif"
+                     /translation="AAVGGPVAWLVSG"
+                     /label="PKSI-AT-M_m5"
+     CDS_motif       3561..3617
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m1 (e-value: 4.1e-05,
+                     bit-score: 16.1)"
+                     /locus_tag="BV401_RS41145"
+                     /motif="PKSI-AT-mM_m1"
+                     /database="abmotifs"
+                     /evalue="4.10E-05"
+                     /asDomain_id="nrpspksmotif_BV401_RS41145_0002"
+                     /detection="hmmscan"
+                     /score="16.1"
+                     /aSTool="pksnrpsmotif"
+                     /translation="VFVFPGPGAPWLGLAVGLL"
+                     /label="PKSI-AT-mM_m1"
+     aSDomain        3567..4310
+                     /domain="PKS_AT"
+                     /locus_tag="BV401_RS41145"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="3.20E-56"
+                     /score="182.5"
+                     /translation="VFPGPGAPWLGLAVGLLASSPVFAAALGACAPALSASVAWSLPAV
+                     LRGGAGAPGFARVAVVPPVLFAVLVSLAPLWRSVGVAPAAVLGPRPGALAAACVAGALS
+                     LAAAAPVVALRSPALAAGLAGPGGLVSVGLSAARAPARLAAWAGALSVAAVPGPGSVVV
+                     SGAPGALAALVAALAGAAVRVRRVPVASASPSAPVAGLRAALLRVLAALAPRSSAVPFS
+                     SPVSGALVAPAGLAAASWSRPLRPPV"
+                     /label="BV401_RS41145_AT1"
+                     /asDomain_id="nrpspksdomains_BV401_RS41145_AT1"
+                     /specificity="PKS signature: N/A"
+                     /specificity="Minowa: mmal"
+                     /specificity="consensus: pk"
+                     /aSASF_scaffold="Scaffold coordinates: (93,94,97,98);
+                     scaffold residues: (G,P,G,A); expected: (G,H,G,E);
+                     matchArray: (True,False,True,False); emission probability
+                     array (n.d.,n.d.,n.d.,n.d.); overall match: FALSE"
+                     /aSASF_scaffold="Scaffold coordinates:
+                     (93,94,95,120,196,198,199,227,244,245); scaffold residues:
+                     (G,P,R,R,A,P,S,S,-,-); expected: (G,H,S,R,A,H,S,S,Y,W);
+                     matchArray:
+                     (True,False,False,True,True,False,True,True,False,False);
+                     emission probability array
+                     (n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.);
+                     overall match: FALSE"
+                     /aSASF_choice="Description: Active site serine, choice
+                     result: active site serine found, choice coordinates: (95);
+                     residues: (R); expected for choice: (S); matchArray:
+                     (False); emission probability array (n.d.); overall match:
+                     FALSE"
+                     /aSASF_choice="Description: AT domain specific for
+                     malonyl-CoA, choice result: Malonyl-CoA specific, choice
+                     coordinates: (195,197); residues: (S,S); expected for
+                     choice: (H,F); matchArray: (False,False); emission
+                     probability array (n.d.,n.d.); overall match: FALSE"
+                     /aSASF_choice="Description: AT domain specific for
+                     methylmalonyl-CoA, choice result: Methylmalonyl-CoA
+                     specific, choice coordinates: (195,197); residues: (S,S);
+                     expected for choice: (Y,S); matchArray: (False,True);
+                     emission probability array (n.d.,n.d.); overall match:
+                     FALSE"
+                     /aSASF_note="ASF analyisis with definition ASP_AT (type
+                     active_site)"
+                     /aSASF_note="ASF analyisis with definition PKSI_AT_Spec
+                     (type prediction)"
+     CDS_motif       3735..3800
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m2 (e-value: 1.6e-07,
+                     bit-score: 23.9)"
+                     /locus_tag="BV401_RS41145"
+                     /motif="PKSI-AT-mM_m2"
+                     /database="abmotifs"
+                     /evalue="1.60E-07"
+                     /asDomain_id="nrpspksmotif_BV401_RS41145_0003"
+                     /detection="hmmscan"
+                     /score="23.9"
+                     /aSTool="pksnrpsmotif"
+                     /translation="RVAVVPPVLFAVLVSLAPLWRS"
+                     /label="PKSI-AT-mM_m2"
+     CDS_motif       3804..4022
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m3 (e-value: 3.108e-08,
+                     bit-score: 28.8)"
+                     /locus_tag="BV401_RS41145"
+                     /motif="PKSI-AT-mM_m3"
+                     /database="abmotifs"
+                     /evalue="3.11E-08"
+                     /asDomain_id="nrpspksmotif_BV401_RS41145_0004"
+                     /detection="hmmscan"
+                     /score="28.8"
+                     /aSTool="pksnrpsmotif"
+                     /translation="GVAPAAVLGPRPGALAAACVAGALSLAAAAPVVALRSPALAAGLA
+                     GPGGLVSVGLSAARAPARLAAWAGALSV"
+                     /label="PKSI-AT-mM_m3"
+     CDS_motif       4023..4061
+                     /note="NRPS/PKS Motif: PKSI-AT-M_m5 (e-value: 0.19,
+                     bit-score: 5.4)"
+                     /locus_tag="BV401_RS41145"
+                     /motif="PKSI-AT-M_m5"
+                     /database="abmotifs"
+                     /evalue="1.90E-01"
+                     /asDomain_id="nrpspksmotif_BV401_RS41145_0005"
+                     /detection="hmmscan"
+                     /score="5.4"
+                     /aSTool="pksnrpsmotif"
+                     /translation="AAVPGPGSVVVSG"
+                     /label="PKSI-AT-M_m5"
+     gene            4283..>6031
+                     /locus_tag="BV401_RS41150"
+                     /pseudo=""
+                     /db_xref="GeneID:34075742"
+     CDS             4283..>6031
+                     /locus_tag="BV401_RS41150"
+                     /inference="COORDINATES: protein motif:HMM:PF08659.8"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="polyketide synthase"
+                     /db_xref="GeneID:34075742"
+                     /translation="LVPAPAAARCAGGPPRPLLAPGPGVFLAVRPPPVLPLPVPPPVAA
+                     AAAPAVVVGPLRRAAGGLARFLPSAAALPVPGAPVAWRPVFAGPRARRVALPPSAFPRP
+                     RSWLAALSAAAVAAAGAGLRAAAVAARFWAAVARAALAALARPLAVAAAARPSSLPALL
+                     PALSSWRRPRRAPPPVARWRSPAVWPPLASASASPLSGPWLVAVPAACGAAPLAAPVLA
+                     GLPGRGAPVVSVVVGAAAARAAVAARLRVALAGVAVAPSAVAGVFSLLALAASRPPAFG
+                     VVPGGLAALVGLVPGLGAAGVVAPLWCGPRGAVSVGRSARLVRPVPSLVWGLGRLVGAA
+                     SPPRWGGVVALPAALARRALVRLAGVLAGAVGAAPVAVRGSGVFVPRLVRASASAAPGV
+                     GGWRSGGSVLVPGGPGALGGPVARWLARPGAAPLVLPRRRGLAAAGAAGLPAALAALGA
+                     RVPVAACAAAARAALAAVLAALPSALPLPAVVPPAGVLAAGVVAALPVARAAGVLRPPV
+                     AAAWPLPALPAGLALSAFVLFSSAAGPLGGPGPGRSAAGPASLAALASPRRAAGLPAPS
+                     LGWGAWA"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: adh_short (E-value: 8.7e-34,
+                     bitscore: 106.5, seeds: 230)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KR (405-583). E-value:
+                     7.1e-32. Score: 102.3; Predicted KR activity: inactive;
+                     Predicted KR stereochemistry: C1;"
+                     /sec_met="ASF-prediction: PKS_KR (405..583): Full match for
+                     prediction: KR catalyzing L-configuration product"
+     aSDomain        5498..6031
+                     /domain="PKS_KR"
+                     /locus_tag="BV401_RS41150"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="7.10E-32"
+                     /score="102.3"
+                     /translation="GSVLVPGGPGALGGPVARWLARPGAAPLVLPRRRGLAAAGAAGLP
+                     AALAALGARVPVAACAAAARAALAAVLAALPSALPLPAVVPPAGVLAAGVVAALPVARA
+                     AGVLRPPVAAAWPLPALPAGLALSAFVLFSSAAGPLGGPGPGRSAAGPASLAALASPRR
+                     AAGLPAPSLGWGAWA"
+                     /label="BV401_RS41150_KR1"
+                     /asDomain_id="nrpspksdomains_BV401_RS41150_KR1"
+                     /specificity="KR activity: inactive"
+                     /specificity="KR stereochemistry: C1"
+                     /aSASF_scaffold="Scaffold coordinates: (149, 162, 166);
+                     scaffold residues: (S,S,P); expected: (S,Y,N); matchArray:
+                     (True,False,False); emission probability array
+                     (n.d.,n.d.,n.d.); overall match: FALSE"
+                     /aSASF_scaffold="Scaffold coordinates:
+                     (33,65,92,97,120,148); scaffold residues: (R,A,A,A,P,S);
+                     expected: (R,D,G,A,K,S); matchArray:
+                     (True,False,False,True,False,True); emission probability
+                     array (n.d.,n.d.,n.d.,n.d.,n.d.,n.d.); overall match:
+                     FALSE"
+                     /aSASF_choice="Description: KR domain putatively catalyzing
+                     D-configuration product formation, choice result: KR
+                     catalyzing D-configuration product, choice coordinates:
+                     (102); residues: (A); expected for choice: (D); matchArray:
+                     (False); emission probability array (n.d.); overall match:
+                     FALSE"
+                     /aSASF_choice="Description: KR domain putatively catalyzing
+                     L-configuration product formation, choice result: KR
+                     catalyzing L-configuration product, choice coordinates:
+                     (102); residues: (A); expected for choice: ([^D]);
+                     matchArray: (True); emission probability array (n.d.);
+                     overall match: TRUE"
+                     /aSASF_choice="Description: Active site S,Y,N catalytic
+                     triade, choice result: catalytic triade S,Y,N found, choice
+                     coordinates: (149,162,166); residues: (S,S,P); expected for
+                     choice: (S,Y,N); matchArray: (True,False,False); emission
+                     probability array (n.d.,n.d.,n.d.); overall match: FALSE"
+                     /aSASF_prediction="Full match for prediction: KR catalyzing
+                     L-configuration product"
+                     /aSASF_note="ASF analyisis with definition PKSI_KR_Stereo
+                     (type prediction)"
+                     /aSASF_note="ASF analyisis with definition ASP_PKSI-KR
+                     (type active_site)"
+     CDS_motif       5501..5599
+                     /note="NRPS/PKS Motif: PKSI-KR_m1 (e-value: 3.2e-06,
+                     bit-score: 19.8)"
+                     /locus_tag="BV401_RS41150"
+                     /motif="PKSI-KR_m1"
+                     /database="abmotifs"
+                     /evalue="3.20E-06"
+                     /asDomain_id="nrpspksmotif_BV401_RS41150_0001"
+                     /detection="hmmscan"
+                     /score="19.8"
+                     /aSTool="pksnrpsmotif"
+                     /translation="SVLVPGGPGALGGPVARWLARPGAAPLVLPRRR"
+                     /label="PKSI-KR_m1"
+     CDS_motif       5882..5986
+                     /note="NRPS/PKS Motif: PKSI-KR_m4 (e-value: 8.7e-05,
+                     bit-score: 15.0)"
+                     /locus_tag="BV401_RS41150"
+                     /motif="PKSI-KR_m4"
+                     /database="abmotifs"
+                     /evalue="8.70E-05"
+                     /asDomain_id="nrpspksmotif_BV401_RS41150_0002"
+                     /detection="hmmscan"
+                     /score="15.0"
+                     /aSTool="pksnrpsmotif"
+                     /translation="AFVLFSSAAGPLGGPGPGRSAAGPASLAALASPRR"
+                     /label="PKSI-KR_m4"
+     gene            5919..>7373
+                     /locus_tag="BV401_RS41155"
+                     /pseudo=""
+                     /db_xref="GeneID:34075745"
+     CDS             5919..>7373
+                     /locus_tag="BV401_RS41155"
+                     /inference="COORDINATES: protein motif:HMM:PF00109.24"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /note="smCOG: SMCOG1022:Beta-ketoacyl_synthase (Score:
+                     63.4; E-value: 3.3e-19);"
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /db_xref="GeneID:34075745"
+                     /translation="VVRVRGVPRRVLPLSPRWRRRGVRLAFRPPPSAGAPGPAVASSPV
+                     RSVRRCAARGCWPCPPRWRFRPCPRRWPPPRPSSPSPPSPGPASPRPPSPAPSSARCAA
+                     RGPRPRGRRPPGWRRPRAGGPPRPAGRPAPGAARRRAARSGACPGRRCPRSRPRGRGRV
+                     GPCLPRPRLRLAARRCPAPSARRGARAAAAGPPGLRLPPPPVLARFLPGALFGPAAGGA
+                     AAVPPPRSASFAAPLALVALRCRFPGGVRPPAPLWAVVPAGVAPLSGFPAARGWALAGL
+                     SAPAPAPPGPPSALPGGFLAPVSAFAPAFFGLSPRAALALAPPPRLLLAPSWAAFARAG
+                     LAPAALRGRPAGVFLGSPSPASRGRALRAPAGVPGSLGLGRASRVASGRLSSPFGFAGP
+                     AVPVAPACSSSLVALPLACPSLRPGACALALAGGVPLLAPPGPFVAFRAPRVLSPAGRC
+                     PAFSAAAAGPGWSAGVGLLLVARLSAA"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: PKS_KS (E-value: 5.1e-59,
+                     bitscore: 189.6, seeds: 2284); mod_KS (E-value: 1.3e-73,
+                     bitscore: 237.6, seeds: 217); hyb_KS (E-value: 6.7e-56,
+                     bitscore: 179.2, seeds: 33); itr_KS (E-value: 1.4e-45,
+                     bitscore: 145.2, seeds: 96); tra_KS (E-value: 9.1e-48,
+                     bitscore: 152.5, seeds: 44); PKS_KS (E-value: 5.1e-59,
+                     bitscore: 189.6, seeds: 2284); mod_KS (E-value: 1.3e-73,
+                     bitscore: 237.6, seeds: 217); hyb_KS (E-value: 6.7e-56,
+                     bitscore: 179.2, seeds: 33); itr_KS (E-value: 1.4e-45,
+                     bitscore: 145.2, seeds: 96); tra_KS (E-value: 9.1e-48,
+                     bitscore: 152.5, seeds: 44)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KS (237-485). E-value:
+                     2.4e-58. Score: 189.6;"
+                     /sec_met="ASF-prediction: PKS_KS (237..485): Full match for
+                     prediction: active site cysteine found"
+                     /aSProdPred=""
+     aSDomain        6630..7373
+                     /domain="PKS_KS"
+                     /locus_tag="BV401_RS41155"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="2.40E-58"
+                     /score="189.6"
+                     /translation="ALVALRCRFPGGVRPPAPLWAVVPAGVAPLSGFPAARGWALAGLS
+                     APAPAPPGPPSALPGGFLAPVSAFAPAFFGLSPRAALALAPPPRLLLAPSWAAFARAGL
+                     APAALRGRPAGVFLGSPSPASRGRALRAPAGVPGSLGLGRASRVASGRLSSPFGFAGPA
+                     VPVAPACSSSLVALPLACPSLRPGACALALAGGVPLLAPPGPFVAFRAPRVLSPAGRCP
+                     AFSAAAAGPGWSAGVGLLLVARLSAA"
+                     /asDomain_id="nrpspksdomains_BV401_RS41155_Xdom01"
+                     /aSASF_scaffold="Scaffold coordinates: (176,186,187,188);
+                     scaffold residues: (G,S,S,S); expected: (G,S,S,S);
+                     matchArray: (True,True,True,True); emission probability
+                     array (n.d.,n.d.,n.d.,n.d.); overall match: TRUE"
+                     /aSASF_choice="Description: Active site cysteine, choice
+                     result: active site cysteine found, choice coordinates:
+                     (185); residues: (C); expected for choice: (C); matchArray:
+                     (True); emission probability array (n.d.); overall match:
+                     TRUE"
+                     /aSASF_prediction="Full match for prediction: active site
+                     cysteine found"
+                     /aSASF_note="ASF analyisis with definition ASP_KS (type
+                     active_site_toCorrect)"
+     CDS_motif       7110..7157
+                     /note="NRPS/PKS Motif: PKSI-KS_m3 (e-value: 0.00077,
+                     bit-score: 12.1)"
+                     /locus_tag="BV401_RS41155"
+                     /motif="PKSI-KS_m3"
+                     /database="abmotifs"
+                     /evalue="7.70E-04"
+                     /asDomain_id="nrpspksmotif_BV401_RS41155_0001"
+                     /detection="hmmscan"
+                     /score="12.1"
+                     /aSTool="pksnrpsmotif"
+                     /translation="GPAVPVAPACSSSLVA"
+                     /label="PKSI-KS_m3"
+     gene            8547..>11393
+                     /locus_tag="BV401_RS41160"
+                     /pseudo=""
+                     /db_xref="GeneID:34075746"
+     CDS             8547..>11393
+                     /locus_tag="BV401_RS41160"
+                     /inference="COORDINATES: protein motif:HMM:PF08659.8"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /note="smCOG:
+                     SMCOG1001:short-chain_dehydrogenase/reductase_SDR (Score:
+                     24.5; E-value: 2.8e-07);"
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /db_xref="GeneID:34075746"
+                     /translation="VAGVFSLAAACALVAARGRLLPALPAGGALVAVPAPAAALAASLA
+                     GRAAAVRLAALPGPPPWSSRAPRPPCWRSPARGRGRAVRPAACASAPPSPPRAWPVCSV
+                     PSGRLSRGCCSPRRPSPWCPPSPAPRPPRPRCARRRPGSGLCARPCGSRPGSGPWRPWA
+                     CPRSSRWARPVCSPRWRRPACRPPPPVARWLPPSCPPCARPGPRFRRCPWRWPPSLCPA
+                     SRCRGPRCSPGVAPRGWRCPPPPSRGRAPGSPPRRPPVALCPRRAWPRPPLRSWAPPSP
+                     WPPPPPPCSPGACRSPPRRGWPPPPSRPPCSSPARPSWPWPCAPPRRWAPRGWRPCPSP
+                     CRWSCPSAARSRSRSPWARRPRPAPVRSLCPPGPRPPRRPPPGRALRPACSAGPCPPGP
+                     GVRGRRLRRVAARGCGGPRRGRSLRPVPRRRLRLRPGLPGAARRLAPWRRGLRRGRPAR
+                     GPGGRGRALRSPPGAARRLAAPRGVPAVRPRRPPPPVLVARGAPPRPRRVRAAGAAAPR
+                     RRGPGLPARPRRLRRARRLGRLARPAARGPGAGPLRPAARVAVPGRLGAARPGAARRGR
+                     RALGARRPRPGRAARRPRLGRCPRGPLPGPRGPGRGPRRGRARARRRPRRARVPPRPAA
+                     GPGGGGPGRRPPALALLPRWLAAPRLGGSRLVFLPRGALAAGAAPAVAAPARAAVWGLV
+                     RSAPSAPPGRFVLAALAARAGSRRLLPAALPPAAPPLVVRPGPVLVGRLARVAAPGRAS
+                     APGAARSVPPGVPWAPPGPVLVPGAASGLGGLVAPPLVGAPGVRPLVLVRRRGLAAAGA
+                     AALRPALPALGAPAVVAACAPAARASLAALLASLPAAPPLPAVVPPAGVLAAGVVAALP
+                     PARVARVLRPPVAAVLPLPALPAGLALSAFVLFSSLSGPLGGPGPAPSAAAPAFLAAFA
+                     PRRRAAGLPAPSLAWGLWA"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: adh_short (E-value: 6.3e-35,
+                     bitscore: 110.2, seeds: 230)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KR (772-949). E-value:
+                     6.7e-30. Score: 95.9; Predicted KR activity: inactive;
+                     Predicted KR stereochemistry: C1;"
+                     /sec_met="ASF-prediction: PKS_KR (772..949): Full match for
+                     prediction: KR catalyzing L-configuration product"
+     aSDomain        10863..11393
+                     /domain="PKS_KR"
+                     /locus_tag="BV401_RS41160"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="6.70E-30"
+                     /score="95.9"
+                     /translation="VLVPGAASGLGGLVAPPLVGAPGVRPLVLVRRRGLAAAGAAALRP
+                     ALPALGAPAVVAACAPAARASLAALLASLPAAPPLPAVVPPAGVLAAGVVAALPPARVA
+                     RVLRPPVAAVLPLPALPAGLALSAFVLFSSLSGPLGGPGPAPSAAAPAFLAAFAPRRRA
+                     AGLPAPSLAWGLWA"
+                     /label="BV401_RS41160_KR1"
+                     /asDomain_id="nrpspksdomains_BV401_RS41160_KR1"
+                     /specificity="KR activity: inactive"
+                     /specificity="KR stereochemistry: C1"
+                     /aSASF_scaffold="Scaffold coordinates: (149, 162, 166);
+                     scaffold residues: (S,S,P); expected: (S,Y,N); matchArray:
+                     (True,False,False); emission probability array
+                     (n.d.,n.d.,n.d.); overall match: FALSE"
+                     /aSASF_scaffold="Scaffold coordinates:
+                     (33,65,92,97,120,148); scaffold residues: (R,A,A,A,P,S);
+                     expected: (R,D,G,A,K,S); matchArray:
+                     (True,False,False,True,False,True); emission probability
+                     array (n.d.,n.d.,n.d.,n.d.,n.d.,n.d.); overall match:
+                     FALSE"
+                     /aSASF_choice="Description: KR domain putatively catalyzing
+                     D-configuration product formation, choice result: KR
+                     catalyzing D-configuration product, choice coordinates:
+                     (102); residues: (A); expected for choice: (D); matchArray:
+                     (False); emission probability array (n.d.); overall match:
+                     FALSE"
+                     /aSASF_choice="Description: KR domain putatively catalyzing
+                     L-configuration product formation, choice result: KR
+                     catalyzing L-configuration product, choice coordinates:
+                     (102); residues: (A); expected for choice: ([^D]);
+                     matchArray: (True); emission probability array (n.d.);
+                     overall match: TRUE"
+                     /aSASF_choice="Description: Active site S,Y,N catalytic
+                     triade, choice result: catalytic triade S,Y,N found, choice
+                     coordinates: (149,162,166); residues: (S,S,P); expected for
+                     choice: (S,Y,N); matchArray: (True,False,False); emission
+                     probability array (n.d.,n.d.,n.d.); overall match: FALSE"
+                     /aSASF_prediction="Full match for prediction: KR catalyzing
+                     L-configuration product"
+                     /aSASF_note="ASF analyisis with definition PKSI_KR_Stereo
+                     (type prediction)"
+                     /aSASF_note="ASF analyisis with definition ASP_PKSI-KR
+                     (type active_site)"
+     CDS_motif       11244..11348
+                     /note="NRPS/PKS Motif: PKSI-KR_m4 (e-value: 1.1e-07,
+                     bit-score: 24.3)"
+                     /locus_tag="BV401_RS41160"
+                     /motif="PKSI-KR_m4"
+                     /database="abmotifs"
+                     /evalue="1.10E-07"
+                     /asDomain_id="nrpspksmotif_BV401_RS41160_0001"
+                     /detection="hmmscan"
+                     /score="24.3"
+                     /aSTool="pksnrpsmotif"
+                     /translation="AFVLFSSLSGPLGGPGPAPSAAAPAFLAAFAPRRR"
+                     /label="PKSI-KR_m4"
+     gene            12115..>12930
+                     /locus_tag="BV401_RS41165"
+                     /old_locus_tag="BV401_41245"
+                     /pseudo=""
+                     /db_xref="GeneID:34075747"
+     CDS             12115..>12930
+                     /locus_tag="BV401_RS41165"
+                     /old_locus_tag="BV401_41245"
+                     /inference="COORDINATES: protein motif:HMM:PF00109.24"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /note="smCOG: SMCOG1022:Beta-ketoacyl_synthase (Score:
+                     36.6; E-value: 4.3e-11);"
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /db_xref="GeneID:34075747"
+                     /translation="VGSSPPPRSRRPPPPRSSPSSPRRSRAAAAPVPGRSRPPAFPPCP
+                     GCSAACPAAVRAPPLRASLPRAPARLPAPRPALPALPARARAPLALVGLGCRSPGGVAS
+                     PAALWALVASGPAAVSPFPVARGWAAALSAPAPAPPGPRSPRAGGFLPPAPGFAASFFG
+                     LRPRAALAPAPPPRLLLAPSWAALARAGLAPASARGRRPGVFVGVLSPASGSRLPSLPA
+                     GLAGPLGPGRAGRVASGRLSSPFGFAGPAVPVAPACSSSLVALPLAVPAL"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: PKS_KS (E-value: 3.4e-39,
+                     bitscore: 124.3, seeds: 2284); mod_KS (E-value: 7.5e-51,
+                     bitscore: 162.6, seeds: 217); hyb_KS (E-value: 2.6e-36,
+                     bitscore: 114.7, seeds: 33); itr_KS (E-value: 3.7e-30,
+                     bitscore: 94.4, seeds: 96); tra_KS (E-value: 1.8e-29,
+                     bitscore: 92.2, seeds: 44); PKS_KS (E-value: 3.4e-39,
+                     bitscore: 124.3, seeds: 2284); mod_KS (E-value: 7.5e-51,
+                     bitscore: 162.6, seeds: 217); hyb_KS (E-value: 2.6e-36,
+                     bitscore: 114.7, seeds: 33); itr_KS (E-value: 3.7e-30,
+                     bitscore: 94.4, seeds: 96); tra_KS (E-value: 1.8e-29,
+                     bitscore: 92.2, seeds: 44)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KS (89-272). E-value:
+                     1.6e-38. Score: 124.3;"
+                     /aSProdPred=""
+     CDS_motif       12253..12906
+                     /note="NRPS/PKS Motif: PKSI-KS_m3 (e-value: 0.01628,
+                     bit-score: 11.0)"
+                     /locus_tag="BV401_RS41165"
+                     /motif="PKSI-KS_m3"
+                     /database="abmotifs"
+                     /evalue="1.63E-02"
+                     /asDomain_id="nrpspksmotif_BV401_RS41165_0001"
+                     /detection="hmmscan"
+                     /score="11.0"
+                     /aSTool="pksnrpsmotif"
+                     /translation="CSAACPAAVRAPPLRASLPRAPARLPAPRPALPALPARARAPLAL
+                     VGLGCRSPGGVASPAALWALVASGPAAVSPFPVARGWAAALSAPAPAPPGPRSPRAGGF
+                     LPPAPGFAASFFGLRPRAALAPAPPPRLLLAPSWAALARAGLAPASARGRRPGVFVGVL
+                     SPASGSRLPSLPAGLAGPLGPGRAGRVASGRLSSPFGFAGPAVPVAPACSSSLVA"
+                     /label="PKSI-KS_m3"
+     aSDomain        12382..12930
+                     /domain="PKS_KS"
+                     /locus_tag="BV401_RS41165"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="1.60E-38"
+                     /score="124.3"
+                     /translation="ALVGLGCRSPGGVASPAALWALVASGPAAVSPFPVARGWAAALSA
+                     PAPAPPGPRSPRAGGFLPPAPGFAASFFGLRPRAALAPAPPPRLLLAPSWAALARAGLA
+                     PASARGRRPGVFVGVLSPASGSRLPSLPAGLAGPLGPGRAGRVASGRLSSPFGFAGPAV
+                     PVAPACSSSLVALPLAVPAL"
+                     /asDomain_id="nrpspksdomains_BV401_RS41165_Xdom01"
+     gene            12885..>13121
+                     /locus_tag="BV401_RS41170"
+                     /old_locus_tag="BV401_41250"
+                     /pseudo=""
+                     /db_xref="GeneID:34075748"
+     CDS             12885..>13121
+                     /locus_tag="BV401_RS41170"
+                     /old_locus_tag="BV401_41250"
+                     /inference="COORDINATES: protein motif:HMM:PF00109.24"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /db_xref="GeneID:34075748"
+                     /translation="LLLVARGAPPGRPGAPPGACSLALAGGVALLAPPGVFLAFRRLRG
+                     LAVAGRCPSFSPAAAGPGWSAGAGVLLLARLSAA"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: mod_KS (E-value: 3.5e-20,
+                     bitscore: 61.5, seeds: 217); mod_KS (E-value: 3.5e-20,
+                     bitscore: 61.5, seeds: 217)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KS (17-79). E-value:
+                     2.7e-15. Score: 47.8;"
+                     /aSProdPred=""
+     aSDomain        12936..13121
+                     /domain="PKS_KS"
+                     /locus_tag="BV401_RS41170"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="2.70E-15"
+                     /score="47.8"
+                     /translation="GACSLALAGGVALLAPPGVFLAFRRLRGLAVAGRCPSFSPAAAGP
+                     GWSAGAGVLLLARLSAA"
+                     /asDomain_id="nrpspksdomains_BV401_RS41170_Xdom01"
+     gene            13380..>14720
+                     /locus_tag="BV401_RS41175"
+                     /pseudo=""
+                     /db_xref="GeneID:34075749"
+     CDS             13380..>14720
+                     /locus_tag="BV401_RS41175"
+                     /inference="COORDINATES: protein motif:HMM:PF00698.19"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /note="smCOG:
+                     SMCOG1021:malonyl_CoA-acyl_carrier_protein_transacylase
+                     (Score: 91.7; E-value: 3.927e-27);"
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="polyketide synthase"
+                     /db_xref="GeneID:34075749"
+                     /translation="LWLGSFPSPVGPPPAAAGVGGVLPLVLALRPGVLPPPLPVAAPSA
+                     PVAWSAGAVSLLPASPPWPAPGAPRRAGVSSFGVRGPPAPVLLAPAPAAAAAGAAAPAV
+                     AAGPVAWVVSGPGAAGLRAPAARLRASVAGRSALGAAAVARSLVLPRSVLAPRAVLVGR
+                     ARAALLSGLGAVAAPSALPGVVVGARAPPGRSVFVFPGPGAPWVGLAVGLLASSPVFAA
+                     AVGACAAALSASVAWSLPGVLRGVAGAPGFARVAVVPPVLFAVLVSLARLWRSVGVAPA
+                     AVLGPRPGALAAACVAGGLSLAAAAPVVALRSPALAVGLAGRGGLVSVGLSAAPAAARL
+                     ARWGGALSVAAVPGPGSVVVAGAPAALAALVAALAGAAVRVRRVPVASASPSAPVAGLR
+                     AALLRVLAALPPRSSAVPFSSPVPGALVAPAPLAAASWSRPLRPPVAL"
+                     /sec_met="Type: t1pks"
+                     /sec_met="Domains detected: PKS_AT (E-value: 2.1e-56,
+                     bitscore: 180.8, seeds: 1682); mod_KS (E-value: 3.4e-24,
+                     bitscore: 74.7, seeds: 217)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_AT (197-445). E-value:
+                     9.8e-56. Score: 180.8; Substrate specificity predictions:
+                     N/A (PKS signature), mmal (Minowa), pk (consensus);"
+                     /aSProdPred="pk"
+     CDS_motif       13515..13697
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m3 (e-value: 7326.0,
+                     bit-score: -8.4)"
+                     /locus_tag="BV401_RS41175"
+                     /motif="PKSI-AT-mM_m3"
+                     /database="abmotifs"
+                     /evalue="7.33E+03"
+                     /asDomain_id="nrpspksmotif_BV401_RS41175_0001"
+                     /detection="hmmscan"
+                     /score="-8.4"
+                     /aSTool="pksnrpsmotif"
+                     /translation="PVAWSAGAVSLLPASPPWPAPGAPRRAGVSSFGVRGPPAPVLLAP
+                     APAAAAAGAAAPAVAA"
+                     /label="PKSI-AT-mM_m3"
+     CDS_motif       13689..13724
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m5 (e-value: 5.2,
+                     bit-score: 1.1)"
+                     /locus_tag="BV401_RS41175"
+                     /motif="PKSI-AT-mM_m5"
+                     /database="abmotifs"
+                     /evalue="5.20E+00"
+                     /asDomain_id="nrpspksmotif_BV401_RS41175_0002"
+                     /detection="hmmscan"
+                     /score="1.1"
+                     /aSTool="pksnrpsmotif"
+                     /translation="VAAGPVAWVVSG"
+                     /label="PKSI-AT-mM_m5"
+     CDS_motif       13965..14021
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m1 (e-value: 2.3e-05,
+                     bit-score: 16.9)"
+                     /locus_tag="BV401_RS41175"
+                     /motif="PKSI-AT-mM_m1"
+                     /database="abmotifs"
+                     /evalue="2.30E-05"
+                     /asDomain_id="nrpspksmotif_BV401_RS41175_0003"
+                     /detection="hmmscan"
+                     /score="16.9"
+                     /aSTool="pksnrpsmotif"
+                     /translation="VFVFPGPGAPWVGLAVGLL"
+                     /label="PKSI-AT-mM_m1"
+     aSDomain        13971..14714
+                     /domain="PKS_AT"
+                     /locus_tag="BV401_RS41175"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="9.80E-56"
+                     /score="180.8"
+                     /translation="VFPGPGAPWVGLAVGLLASSPVFAAAVGACAAALSASVAWSLPGV
+                     LRGVAGAPGFARVAVVPPVLFAVLVSLARLWRSVGVAPAAVLGPRPGALAAACVAGGLS
+                     LAAAAPVVALRSPALAVGLAGRGGLVSVGLSAAPAAARLARWGGALSVAAVPGPGSVVV
+                     AGAPAALAALVAALAGAAVRVRRVPVASASPSAPVAGLRAALLRVLAALPPRSSAVPFS
+                     SPVPGALVAPAPLAAASWSRPLRPPV"
+                     /label="BV401_RS41175_AT1"
+                     /asDomain_id="nrpspksdomains_BV401_RS41175_AT1"
+                     /specificity="PKS signature: N/A"
+                     /specificity="Minowa: mmal"
+                     /specificity="consensus: pk"
+                     /aSASF_scaffold="Scaffold coordinates: (93,94,97,98);
+                     scaffold residues: (G,P,G,A); expected: (G,H,G,E);
+                     matchArray: (True,False,True,False); emission probability
+                     array (n.d.,n.d.,n.d.,n.d.); overall match: FALSE"
+                     /aSASF_scaffold="Scaffold coordinates:
+                     (93,94,95,120,196,198,199,227,244,245); scaffold residues:
+                     (G,P,R,R,A,P,S,S,-,-); expected: (G,H,S,R,A,H,S,S,Y,W);
+                     matchArray:
+                     (True,False,False,True,True,False,True,True,False,False);
+                     emission probability array
+                     (n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.,n.d.);
+                     overall match: FALSE"
+                     /aSASF_choice="Description: Active site serine, choice
+                     result: active site serine found, choice coordinates: (95);
+                     residues: (R); expected for choice: (S); matchArray:
+                     (False); emission probability array (n.d.); overall match:
+                     FALSE"
+                     /aSASF_choice="Description: AT domain specific for
+                     malonyl-CoA, choice result: Malonyl-CoA specific, choice
+                     coordinates: (195,197); residues: (S,S); expected for
+                     choice: (H,F); matchArray: (False,False); emission
+                     probability array (n.d.,n.d.); overall match: FALSE"
+                     /aSASF_choice="Description: AT domain specific for
+                     methylmalonyl-CoA, choice result: Methylmalonyl-CoA
+                     specific, choice coordinates: (195,197); residues: (S,S);
+                     expected for choice: (Y,S); matchArray: (False,True);
+                     emission probability array (n.d.,n.d.); overall match:
+                     FALSE"
+                     /aSASF_note="ASF analyisis with definition ASP_AT (type
+                     active_site)"
+                     /aSASF_note="ASF analyisis with definition PKSI_AT_Spec
+                     (type prediction)"
+     CDS_motif       14139..14204
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m2 (e-value: 1.9e-08,
+                     bit-score: 26.7)"
+                     /locus_tag="BV401_RS41175"
+                     /motif="PKSI-AT-mM_m2"
+                     /database="abmotifs"
+                     /evalue="1.90E-08"
+                     /asDomain_id="nrpspksmotif_BV401_RS41175_0004"
+                     /detection="hmmscan"
+                     /score="26.7"
+                     /aSTool="pksnrpsmotif"
+                     /translation="RVAVVPPVLFAVLVSLARLWRS"
+                     /label="PKSI-AT-mM_m2"
+     CDS_motif       14208..14318
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m3 (e-value: 6.4e-09,
+                     bit-score: 28.3)"
+                     /locus_tag="BV401_RS41175"
+                     /motif="PKSI-AT-mM_m3"
+                     /database="abmotifs"
+                     /evalue="6.40E-09"
+                     /asDomain_id="nrpspksmotif_BV401_RS41175_0005"
+                     /detection="hmmscan"
+                     /score="28.3"
+                     /aSTool="pksnrpsmotif"
+                     /translation="GVAPAAVLGPRPGALAAACVAGGLSLAAAAPVVALRS"
+                     /label="PKSI-AT-mM_m3"
+     CDS_motif       14427..14465
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m5 (e-value: 0.53,
+                     bit-score: 3.9)"
+                     /locus_tag="BV401_RS41175"
+                     /motif="PKSI-AT-mM_m5"
+                     /database="abmotifs"
+                     /evalue="5.30E-01"
+                     /asDomain_id="nrpspksmotif_BV401_RS41175_0006"
+                     /detection="hmmscan"
+                     /score="3.9"
+                     /aSTool="pksnrpsmotif"
+                     /translation="AAVPGPGSVVVAG"
+                     /label="PKSI-AT-mM_m5"
+     gene            14687..>15586
+                     /locus_tag="BV401_RS41180"
+                     /pseudo=""
+                     /db_xref="GeneID:34075750"
+     CDS             14687..>15586
+                     /locus_tag="BV401_RS41180"
+                     /inference="COORDINATES: protein motif:HMM:PF14765.4"
+                     /note="incomplete; partial in the middle of a contig;
+                     missing stop; Derived by automated computational analysis
+                     using gene prediction method: Protein Homology."
+                     /pseudo=""
+                     /codon_start=1
+                     /transl_table=11
+                     /product="polyketide synthase"
+                     /db_xref="GeneID:34075750"
+                     /translation="LVPAPAAAGCAGVPASPAARRGPPVFLAVRPPPVLPLPVPPPVAA
+                     AASRAVVVGPLRRAAGGAARFLPSAAALPVRGARVAWPPVFAGPGAPRVALPPSAFPPA
+                     RFWLAAPAGVGAVGSVGLGSLGPPLLGAVVSLARGGGVLLRGRLSLAPPAWLAAPAVPG
+                     VLLLPGPAFVALVVRAGAPVGCGRVAALVLAAPLLVPAPGGVPLPVAVGAAAASGFRAV
+                     RVSSRAAAAGAGAAWVRPAPGVLGSAVPRSAPPSAFGVWPPVGAALVAVSGASVRAAAP
+                     GLASGPVFPGLRRAWRRAG"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_DH (127-292). E-value:
+                     2.1e-37. Score: 120.6;"
+     aSDomain        15068..15562
+                     /domain="PKS_DH"
+                     /locus_tag="BV401_RS41180"
+                     /detection="hmmscan"
+                     /database="nrpspksdomains.hmm"
+                     /evalue="2.10E-37"
+                     /score="120.6"
+                     /translation="PLLGAVVSLARGGGVLLRGRLSLAPPAWLAAPAVPGVLLLPGPAF
+                     VALVVRAGAPVGCGRVAALVLAAPLLVPAPGGVPLPVAVGAAAASGFRAVRVSSRAAAA
+                     GAGAAWVRPAPGVLGSAVPRSAPPSAFGVWPPVGAALVAVSGASVRAAAPGLASGPVFP
+                     GL"
+                     /asDomain_id="nrpspksdomains_BV401_RS41180_Xdom01"
+ORIGIN
+        1 tgtttgctgc ggttgggctt ccggcggggg cgcgggcgcg ggcggggccg tttggtttgc
+       61 ctccggcgtt gttcgctgcg gcgttgcctg cgttgggtgt gcgtggggct cttgcgggtg
+      121 gttcggggcg tttgttgccg ttctcgtggc gtgggttcgc tttggcggcg gtgggtgcgc
+      181 cgtcgttgcg ggtgcggttg gcgtcggtgg gtgctgggtc ggctgcggtg tcggtgctgg
+      241 tgggggctgc gtccgggcgt ggggtggcct cggtcgcgtc gctggtgctg cgcccggtcg
+      301 ccgcggctcc gctgcccgcg gtcggcggcg cggcgcgcgc tgggttgttc cgggtggcgt
+      361 gggtggccgc gcctggggct gtggcggccg ggggtgcggt ggcgtcgcgg cctgcggtgg
+      421 tgcgggtcgt ttccgcgggt ccggctgtgg tgggtgcggt gtctggccgg gtccttgcgg
+      481 tcctggcgcg ggtgcgggcg tgggtggcgg ctgcggctct cgcgggtgcg cggttggtgg
+      541 tggtgccgcg gggtgctgtc gctgcgggcg ctggtgtggc ggccctggcc ggggcggcgg
+      601 tgtgggggct cgtgcggtcc gcgccgtcgg cgcccccggg gcgtctggtg ctggtggccc
+      661 ccgctgctgt ggcgggtgtc ggtggcgttc tgcccggggt gctggctctg ggtgcggcgc
+      721 cggtggtggt gcgttcgggt gtggtgcggg tgccgcgtct gggtcgggtg cgggtgtcgg
+      781 gtgcggtgtc gggtgggttt ggttcgggtg cggtgttggt gccgggtggt ccgggtgtgt
+      841 tgggtggtgt ggtgtcgcgg cctctggtgg tgcggcctgg ggtgcgccgg ctggtgttgt
+      901 tgtcgcgtcg tggtgcggcg gccgcgggtg cggcggcgtt gcgggcggcg ttggcggggg
+      961 cgggtgctgc ggtggtgctc gcggcgtgtg ctgccgcggc tggtgcggct ttggccgggg
+     1021 tgttgtcggg gttgccggcg ggttttgcgc tccgtggtgt ggtgcctgcg gcgggtgtgc
+     1081 tggctgccgg gttgctgccg tcgttgccgc gtgcgcgggt tgcgccggtg ttgcgggcgc
+     1141 cggtggccgc tgcgtggcct ctgcctgcgc tgccggcggg gctggctctg tcggcgttcg
+     1201 tgctgttctc gtcggcccct ggtgtgctgg gtggtgccgg gccgcgcccc tccgcggctg
+     1261 cgcctgtgtt cctggctggt ctcgcctcgt ggcggcgggc gccggggctg ccgggtgtgt
+     1321 cgctggcgtg gggtctgtgg gccgcggccc gtggcctgcc cggccccctc ggcgcggccg
+     1381 ccctcccgcg cctctcccgc tcgggcgtgc tgccgctggc cccggccgcg ggccttgcgc
+     1441 tgttcgccgc cgccctggtc tcggctgcgg tcgtcccggt tctcttccgg ctggctctcc
+     1501 cggcgctgcg tgcgccgggc gccgccctcc ccgccctctt ccgccctgtc gtcccggggc
+     1561 tgccggtccg gcgcgtcgcc ggtgccggcg ccgcggccgt ggccgccctc gccgcccgcc
+     1621 tgcggcggcg cctggtccgc ctgtccgcgg cggccccggc gccgttcctg ctggcggcgc
+     1681 tcctccgtct cccggtggcc gccgccctgg gccccgcgcc ctcggccccc gtcgcggtgg
+     1741 gccggccctt cccggcgctg ggcttcgcct cgctcccggc cgtggccctg cgcccccggc
+     1801 tgcgtgcggc ccccggtttg cgcctgcccg cgccgctcgt tttcgcctcc ccgcccccgc
+     1861 cggtcctggc gggccctctg cgttcggcgc tcctcgggtc cccgggcccg gcccccgcgg
+     1921 ccccgccggc gggcggctcc gccgcggccc tgtcccgccc ggccgccgct ccgctcgcgc
+     1981 tcgtctccct gcgctgccgc ttccccggtg gggtgcggcc gcccgcggcc ctgtggcccc
+     2041 tggtgctggg gggccccgcc gcccccgcct cgctcccgtc cccccgtggc tgggccctcg
+     2101 cgccgccctc cgccccggcc cccgcgcgcg cgggcccgtc ctccgcccgc cccggtggct
+     2161 tcctctccgc cgccgccccg ttcgccccgg cgttcttcgg gctctcgccc cgtgcggcgc
+     2221 tgtcgctggc cccgccgccg cggctgctgc tggcgccctc ctgggcggcg ttcgcgcggg
+     2281 ccggtctcgc ccccgcgtcg gcgccgggcc gccggcccgg cgtcttcgtc ggcgttgtgt
+     2341 cccccgcctc cggcccccgg ctgcccggcc ccgcccccgc cggctttgcg ggctccctcg
+     2401 gccccggccg tgcgggccgc gtggcctcgg gccgtctctc ctcccccttg ggcttggcgg
+     2461 ggcccgcggt gccggtggcc cccgcgtgct cgtcgtcgct ggtcgcgctg cccctcgcgg
+     2521 tcccggcgct gcgcccgggc gcgtgcgcct tggcgctcgc cggtggcgcg ccggtgctgt
+     2581 ccccccggcc ggcctggtgg ccttccgccg tccgcgcgcg ctgtccgccg ccggcccgtg
+     2641 cccggcgttc cgccctgccg ccgctggctt cggcttcgcc gcgggcgtcg ggctgctgct
+     2701 cgtcgcgcgg ctgtcggccg cccggcgccc cggccccgcg gtgctggccc tcgtccgggg
+     2761 ttcggcggtc cccccggccg gcgcgtcccc cggtctgccg gcgccgcccg gcccgtcccc
+     2821 gccgcgggtg ctccgcgcgg cgctcccgcc cgcccggctg tcgggcgccg cggtcgccgc
+     2881 ggtggcggcg cccggtccgg gtccgtcgct gggtgccccg ctcgcggcgc cggctctgct
+     2941 ggccccctcc ggcccggccc ggcccccggc cccgccgctg tggctcggct cggtgccgtc
+     3001 gcccctcggc ccttcgccgg cggcggccgg tgtggccggt gtcctcccgc tggtgctggc
+     3061 gctgcggccc ggcgtgttgc cgccgtcgct gcccctcgct gcgccgtccc cgcccgtggc
+     3121 ctggtcggcg ggcgccctcg cgctgctccc cgcggccccc gcctggccgg cgtcggcccc
+     3181 ccgcgccgcg ccggcgtgtc gtccttcggc gtgcgcgggc cccctcgccc gcgctcctgg
+     3241 cgccggcccc ggcggtcgcg gcggccgcgg ctgccgcggc cgcggccgtc ggcggtccgg
+     3301 tggcgtggct ggtgtccggc cgtcgcccgg cgggcctgcg ggcgccggcc gcgcggctgc
+     3361 gggcgttcgt gctcgcgcgc ccggcgctgg ccgccgccgc tgtggcgttc tcgctggtgc
+     3421 cgtcgcgctc ggtgttcgcg ccccgcgggg tggtgccggg tgccgcccgt gcgcccctcc
+     3481 tggcgcggct gggcgcgttg gccggggccg cggtggcctc gggtgtgccg cgtggcgtgg
+     3541 ctgctgcgcg gggccgttcg gtgtttgtgt tccccggtcc gggggcgccg tggctgggcc
+     3601 tggcggtggg gctgctggcg tcctcgccgg tgttcgcggc ggcgctcggc gcgtgtgcgc
+     3661 cggctctgtc ggcgtctgtg gcctggtcgc tgcccgcggt gctgcgtggt ggcgcgggtg
+     3721 ctcccggttt cgctcgggtg gctgtggtgc cgccggtgtt gttcgcggtg ctggtgtcgc
+     3781 tggcgccgct gtggcgctcg gtgggtgtgg cgccggctgc ggtgctgggt ccccgcccgg
+     3841 gcgcgctcgc ggcggcgtgt gtggcgggtg cgttgtcgct ggcggccgcc gcgccggtgg
+     3901 tggcgctgcg gtcgccggcc ctcgccgccg gtctggcggg ccccggtggc ctggtgtccg
+     3961 ttggcctgtc ggcggcccgg gccccggcgc gcctcgccgc ttgggccggt gcgctctcgg
+     4021 tggccgcggt ccccggtccg ggttccgtcg tggtctcggg tgctccgggt gcgctggctg
+     4081 cgctggtggc ggcgctggcg ggtgcggcgg tgcgggtccg ccgggttccg gtggcctccg
+     4141 cctcgccctc cgcgcctgtg gcggggctcc gcgcggcgct gctgcgggtc ctggcggctc
+     4201 tggccccccg ctcctcggcg gtgccgttct cttcgccggt gtccggtgcg ctggtggctc
+     4261 cggccggtct ggctgccgcg tcctggtccc ggcccctgcg gccgcccgtt gcgctggcgg
+     4321 ccccccccgc cccctgctcg cccctggccc cggcgtgttc ctcgcggtgc gcccgccccc
+     4381 ggtgctcccc cttcccgtgc cgccgcccgt ggcggccgcg gccgccccgg cggtggtcgt
+     4441 gggcccgctg cggcgtgccg cgggtggtct ggcgcggttc ctgccctccg ccgccgcgct
+     4501 ccctgtccct ggggccccgg ttgcctggcg gccggtgttc gccggccccc gtgcccgccg
+     4561 tgtcgcgctg ccgccctccg ccttcccgcg cccgcggtcc tggctggccg ccctctcggc
+     4621 cgccgcggtg gcggccgccg gtgccggctt gcgcgccgct gcggtggctg cgcgcttctg
+     4681 ggcggcggtg gcgcgcgcgg ctctggcggc gctggcgcgg ccgttggcgg tggcggccgc
+     4741 ggcgcggccg tcgtcgctgc cggcgctgct tcccgcgctg tcgtcctggc gccgtccgcg
+     4801 gcgcgcgccg cccccggtgg cccgctggcg ttccccggcg gtctggccgc ccctggcgtc
+     4861 cgcgtccgcg tcgccgctct cgggcccctg gctcgtggcc gttccggccg cctgtggtgc
+     4921 cgcgcccctg gctgcccccg tgctggccgg cttgcccggt cgcggcgcgc ctgtggtctc
+     4981 cgtggtcgtc ggggccgcgg ctgcccgcgc ggccgttgcg gcgcggctgc gcgtggcgct
+     5041 tgccggcgtg gcggtggcgc cgtcggccgt ggcgggtgtg ttctcgctgc tggcgctggc
+     5101 cgcgtcccgg cctccggcgt tcggtgtggt gccgggtggt ctggccgcgc tggtgggtct
+     5161 ggttccgggg ctgggcgctg cgggtgtggt ggctccgctg tggtgtggtc cccggggtgc
+     5221 ggtgtcggtg ggtcgttccg cccggctggt gcgcccggtg ccgtcgctgg tgtggggcct
+     5281 gggccggctc gtgggggcgg cgtctccccc gcgctggggc ggtgttgtgg ccctgcccgc
+     5341 ggccctggcc cgccgggcgc tggtccggct ggccggcgtg ctggccggcg cggtcggtgc
+     5401 ggctccggtc gcggtgcgtg gttcgggtgt gttcgtcccg cggctggtgc gggcttccgc
+     5461 gtctgcggcc cccggtgtcg gtgggtggcg ttcgggtggt tcggtgttgg tgcccggtgg
+     5521 tccgggtgcg ctgggtggtc ctgtggcccg ctggctggcg cgtccgggtg ccgcgcctct
+     5581 ggtgctgccg cgccgtcgcg ggctggctgc cgcgggtgcc gccgggttgc cggcggcgtt
+     5641 ggcggcgctc ggggcccggg tgccggtggc ggcgtgcgcc gcggcggccc gtgccgccct
+     5701 ggccgcggtg ctggccgcgc ttccttcggc gttgccgctc cccgccgtgg tgcccccggc
+     5761 cggtgtgctg gccgccggcg tcgtggccgc cctgccggtg gcgcgtgcgg ctggggtgtt
+     5821 gcgtccgccg gtggctgcgg cgtggcctct gcctgcgttg ccggcggggc tggctctgtc
+     5881 ggcgtttgtg ttgttctctt cggcggcggg cccgttgggt ggtccgggtc cggggcgttc
+     5941 cgcggcgggt cctgcctctc tcgccgcgct ggcgtcgccg cggcgtgcgg ctggccttcc
+     6001 ggccccctcc ctcggctggg gcgcctgggc cggcggtggc ctcgtctccg gtgcggtcgg
+     6061 tgcgccgctg cgccgctcgg ggctgctggc cctgtccccc gcgctggcgc tttcggccct
+     6121 gcccccggcg ttggcccccg ccgcgccctt cctcgccgtc gccgccctcg cctggccccg
+     6181 cttcgccgcg gcctccgtcg cccgccccct cttccgcgcg ctgcgcggcg cgcggccccc
+     6241 ggccccgggg ccgccgtccc cccgggtggc gccgcccccg ggcgggcggc cctccccgcc
+     6301 cggctggccg ccctgccccg ggcgccgcgc gccgccgcgc tgcgcgctct ggtgcgtgcc
+     6361 ccggccgccg ctgtcctcgc tcccgcccgc gcggccgcgg tcgcgtcggc ccgtgccttc
+     6421 cgcgccctcg gcttcgcctc gctgcccgcc gttgccctgc gccctcggct cggcgcggcg
+     6481 cccgggctgc ggctgccggt ccgcctggtc ttcgcctccc cccgcccccg gtgctggcgc
+     6541 ggttcctgcc cggcgcgctg ttcggccccg cggccggcgg cgccgccgcg gtcccgccgc
+     6601 cccgctcggc ctccttcgcc gcgcccctcg cgctcgtggc gctgcgctgc cgcttcccgg
+     6661 gcggtgtgcg gccccctgcc ccgctgtggg ccgtggtgcc cgccggcgtc gccccgctct
+     6721 ccgggttccc cgccgcccgt ggctgggccc tcgccgggct ctccgccccc gcccccgccc
+     6781 cgccgggccc gccctccgcg ctccccggcg ggttcctggc ccccgtctcc gccttcgccc
+     6841 cggccttctt cggcctctcc ccgcgtgcgg ccctggccct ggcccccccg ccgcggctgc
+     6901 tgctggcgcc gtcctgggcg gcgttcgcgc gggccggcct cgccccggcg gcgttgcgcg
+     6961 gccgcccggc gggtgtcttc ctcggctcgc cctccccggc ctcccgcggc cgggcgctcc
+     7021 gcgcgccggc cggtgtgccg ggctccctcg gcctcggccg cgcgtcccgc gtcgcctccg
+     7081 gccgcctctc ctcccccttc ggcttcgcgg gcccggccgt gccggtggcc cccgcgtgtt
+     7141 cgtcgtcgct ggtcgccctg cccctggcct gcccgtcgct gcgcccgggc gcgtgcgccc
+     7201 tggcgctggc cggcggtgtg ccgctcctgg ccccgccggg cccgttcgtc gcgttccgcg
+     7261 ccccgcgtgt gctgtcgccg gccggccggt gcccggcgtt ctccgccgcg gccgctggcc
+     7321 ccggctggtc cgcgggtgtg ggtctgctgc tggtggcgcg gctgtcggcc gcccggcgcc
+     7381 gcggcccccc ggtgctggcc gtcgtccggg gttcggcgct ccccccggcc ggcgcgtccc
+     7441 ccggtctgcc ggcgccgccc ggcccgtcgc cgccgcgtgt gctcggcccg gcccttgccc
+     7501 ccgcgggtct gtcggccgcc gctgtggccg cggtggcggc ccctggcccg ggcccctcgc
+     7561 tgggtgcccc gctcgcggcg ccggcgctgc tggccccgtc cggcccggcg cgttccgcgg
+     7621 ccccgccgct gtggctgggc tcgctcccgt cgcccctcgg gcccccgccg gccgcggccg
+     7681 gtgtcgcggg tgtcctcccg ctggtgctgg ccctgcgcgc gggcgtgctg ccgccgccgc
+     7741 tccccgcggc cgcgccctcg ccgcctctcg cctggccccg tggcgccgtg tcgctgctgc
+     7801 ccgcggcgcc cgcgtggccg gcgccggccc gcccgcgccg ggcggccgtg tcgtccttcg
+     7861 ggctccgcgg cccccccgcg cccccgctcc tcgcggcggc cgcccccgtt gcgtcgccgt
+     7921 cgccggcgcc gggtggcgcg gcccccggtt cgcccgcggg tctcccggtg gttccctggc
+     7981 tgctctcggg ccgccccgcc gctgcgctgc gcgctccggc cgggcggctg cgcgcgttcg
+     8041 ccggtgtgcg ccccgcgcgg gccggtgctg tcgccgccct cggctcctcg ctggcgcccc
+     8101 cccgttccgc cctgccctcc cgcgccgctg tggtcgcggc ggccccggcg ccgttccgct
+     8161 ccgggctcgc cgcgttggcg gcgggcgggc ccgcggcccc gctgctcccg ggcgtggccc
+     8221 gggccgcgcc cccgccggcg ttcctgttct cgggcccggg cgcgccgcgg ctgggcctgg
+     8281 gccgggcgct gtccgccgcc ttcccggtgt tcgccccggc gctggccgcg gtgtgcgcct
+     8341 ccctcgctgt gctgctcgcc cggccgctgc ccgcggtgct gttcgcggtc gcgggccgtg
+     8401 ccgccgccgc gttgctgccc ccgccggcgt tccccccgcc cgcgctgttc gccctcgcgg
+     8461 tggcgctgtt ccggctgctg gcgccctggg gtgtcccccc ggctgtgctg ctcggcccct
+     8521 ccctcggtgc ggtcgccgcc gcccctgtgg ccggggtgtt ctccctggcg gccgcgtgcg
+     8581 ccctggtggc ggcccgtggc cggctgctgc cggcgctgcc cgccggcggc gcgctggtgg
+     8641 ccgtcccggc gcccgcggcg gcgctcgccg cgtcgctggc cggtcgcgcg gccgcggtgc
+     8701 gcctcgcggc cctccccggc cccccgccgt ggtcctcgcg ggcgccgcgc ccgccgtgct
+     8761 ggcgctcgcc ggcccgtggg cgcgggcggg ccgtccgccc cgccgcctgc gcgtccgccc
+     8821 cgccttcccc tccccgcgcc tggccggtgt gctcggtgcc ttccggccgg ttgtcgcggg
+     8881 gctgttgttc gccccgccgc ccctctccct ggtgtccccc gtccccggcg ccccggccgc
+     8941 cgcggccgcg gtgtgctcgc cggcgtcctg ggtccggcct gtgcgcgcgg ccgtgcggtt
+     9001 cgcggccggg gtccggcccc tggcgcccct gggcgtgccc tcgttcgtcg cggtgggccc
+     9061 ggccggtgtg ctccccgcgc tggcgccggc ctgcctgccg gccgccgccc ccggtggcgc
+     9121 ggtggctccc gccctcgtgc ccgccctgcg cccggcccgg cccgcgcttc cgtcgctgcc
+     9181 cctggcgctg gccgccctcc ctgtgcccgg cgtcccggtg ccgtgggccg cggtgttcgc
+     9241 cgggcgtggc gccccgcggg tggcgctgcc cccctccgcc ttcccgcggc cgcgctcctg
+     9301 gctcgccgcc gcgccggccg cccgtggcgc tgtgccctcg gcgggcctgg cctcgcccgc
+     9361 ccctccgctc ctgggcgccg ccgtcgccct ggccgccccc gccccctccc tgttccccgg
+     9421 gcgcctgtcg gtcgcccccc cgccgtggct ggccgccccc gccttcgcgg cccccgtgct
+     9481 cttccccggc ccggccttcg tggccctggc cctgcgcgcc gccgcgccgg tgggctccgc
+     9541 gcgggtggcg gccctgcccc tcgccctgcc gttggtcctg cccgtccgcg gcgcggtccc
+     9601 gctcccgctc gccgtgggcg cgccggccgc gtccggcgcc cgttcgctcc ctctgtcctc
+     9661 ccggcccgcg gccgccccgc cggccgcccc ctggccgcgc cctccgcccg gcctgctccg
+     9721 ccgggccctg tccccccggc cccggcgtcc gtggccgccg ccttcgccgt gtggccgccc
+     9781 gcggctgcgg cggccctcgc cgtggccgct ctctccgccc ggttcctcgc cgtcggcttc
+     9841 gcctccggcc cggccttccc ggggctgcgc gccgcctggc gccgtggcgc cgcggtcttc
+     9901 gccgcggtcg ccctgcccgc ggccccggcg ggcgcggccg cgcgctccgg tctccccccg
+     9961 gcgctgctcg ccgcctcgct gccccccgtg gcgttcccgc cgtccggccg cgccggccgc
+    10021 cccctcccgt tctcgtggcc cggggtgccc ctccccgccc gcggcgcgtc cgcgctgcgg
+    10081 gtgcggctgc cccgcgtcgg cgcggccccg gtctccctgc ccgtccccgc cgtctccggc
+    10141 gcgctcgtcg cctcggtcgc ctcgctcgtc ctgcggcccg tggccccggc gccggtcccc
+    10201 tccgccccgc cgcccgcgtc gctgtccccg gtcgcctggg tgccgcccgc cccggcgccg
+    10261 cgcggcgcgg ccgccgggcg ctgggcgctc gtcggccccg cccgggccgc gctgcccggc
+    10321 gccctcggct cggccgctgt ccccgtggcc ccctccccgg ccctcgcggc cctggccgcg
+    10381 gccctcgccg cgggcgcgcc cgcgcccgcc gtcgtcctcg ccgcgcccgt gtcccgcccc
+    10441 ggccggccgc gggccctggc ggcggcggtc cgggccgccg gccccccgcc ctcgccctgc
+    10501 tcccgcgctg gctggccgcc ccccgcctcg gcggctcccg gctggtcttc ctcccccggg
+    10561 gggccctcgc cgcgggcgct gcccccgctg tggccgcccc cgcccgtgcg gccgtctggg
+    10621 gcctggtgcg ctcggccccg tccgcgcccc ccggccggtt cgtcctggcc gccctggccg
+    10681 cccgggccgg ctcgcgccgg ctcctcccgg cggcgctccc ccccgccgcc cccccgctcg
+    10741 tggtccggcc cggcccggtc ctggtcggcc ggctggcccg ggtggcggcg cctggccgcg
+    10801 cgtccgcgcc gggcgccgcc cggtcggtcc cgcccggcgt cccctgggcc ccgccgggcc
+    10861 ccgtcctggt ccccggggcg gcctccggcc tcggcggcct ggtcgccccg cccctcgtcg
+    10921 gcgcgcccgg cgtccgcccc ctcgtgctgg tccgccgccg cggcctcgcc gcggccggcg
+    10981 cggccgccct gcggccggcg ctgccggccc tcggcgcccc cgccgtggtc gccgcctgtg
+    11041 cccccgccgc ccgcgcctcc ctcgccgcgc ttctggcctc cctgccggcc gcccccccgc
+    11101 tccccgccgt ggtgcccccc gccggcgtgc tggccgccgg cgtcgtcgcc gccctcccgc
+    11161 ccgcgcgggt ggcccgtgtg ctgcggcccc cggtggccgc ggtgctccct ctgcccgcgc
+    11221 tgcccgccgg tctcgccctg tccgcgttcg tgctcttctc ctcgctctcc ggccccctcg
+    11281 gcggccccgg cccggccccc tccgcggccg cccccgcctt cctggccgcg ttcgcccccc
+    11341 ggcgccgggc cgcgggcctt cccgccccgt cgctggcctg gggcctgtgg gcggcgcgcc
+    11401 gcggtctgcc gggcccgctg gccgcggccc ctctgcggcg cctcgcccgc gccggcgtgc
+    11461 ccccgctgtc ctccgcggcg gccctggccc tgttcgccgc cgcccgcggc ctcgccgcgg
+    11521 cccctctggt cccggcccgg ctccccgcct cggcgtggcg cgccccggcc gggccgctcc
+    11581 cggcgctgct gcggggcctc ctccggcccc cggcccggcg cggccccgcg ccggcgtccc
+    11641 cgggcggctc cggcgccgcc cccgccgccc tgcgccgccg gctcggctcg ctgccccccg
+    11701 ccgcccggcc gccggcgctc ctcgccctgg tcccggcgcc cgcggccctg gcgctgggcc
+    11761 ccgcccgccc ccgcctgctc gcccccgccc gtggcttcct cgcgctgggc ttcgcctcgc
+    11821 tgcccgcggt cggcctgcgc cccccgctgg gcccggtgcc cggtctgcgg ctccccgccc
+    11881 ccctgctgtt cgcctccccg ccgtcccggg cgctggccgg ctccctggcg ccggcgctcg
+    11941 tcgcggccgc gccggccgcc tcgctggtgc tgccggttct gtcggcgctg gcgccgctgg
+    12001 cgcgctcctt cgccgcggtg gtggcggccg ccgccgcccc ggcccgtctc ccctcgcgct
+    12061 tgccgccggt gctggcgccg ctgcccgcgg ggccgccgcc ggcgcccgcg cccggtgggg
+    12121 tcgtcgccgc cgccccgttc gcgtcggccc ccgccgccgc gctcttcgcc ttcctcgccg
+    12181 cggcgctctc gtgccgcggc cgcccccgtc cccggccgtt cccggccgcc ggctttcccc
+    12241 ccctgtccgg ggtgctccgc ggcgtgcccc gccgcggtgc gtgcgccccc gctgcgcgcc
+    12301 tccctcccgc gcgcgccggc ccgcctgccc gcccctcgtc ccgcgctgcc ggccctcccg
+    12361 gcccgggccc gggcccccct cgcgctcgtc ggcctggggt gccggtctcc cggcggcgtg
+    12421 gcgtcgcccg ccgccctgtg ggcgctggtc gcctcgggcc ccgccgcggt gtcccccttc
+    12481 cccgtggccc gtgggtgggc cgcggccctg tccgcccccg ccccggcgcc gccgggcccg
+    12541 cgctctccgc gtgcgggcgg gttcctgccc cccgcgcccg gcttcgccgc ctccttcttc
+    12601 ggcctgcgtc cgcgtgcggc gctggcgccc gcccccccgc cgcggctgct gctggcgccc
+    12661 tcctgggcgg cgctggcgcg cgcgggcctc gccccggcgt ccgcgcgtgg ccgccgcccc
+    12721 ggcgtgttcg tcggcgtgct gtcccccgcc tccggctccc gcctcccgtc cctccccgcg
+    12781 ggcctcgccg gccccctcgg ccccggccgc gccggccgcg tcgcctccgg ccgtctctcc
+    12841 tcccccttcg gcttcgccgg ccccgccgtg cccgtggccc cggcctgctc ctcgtcgctc
+    12901 gtggcgctcc ccctggccgt cccggcgctc ccccgggcgc ctgctcgctc gcgctcgccg
+    12961 gtggcgtggc cctgctggcg ccccccgggg tgttcctcgc gttccgccgg ttgcgcggcc
+    13021 tcgccgtggc cggccgctgc ccgtcgttct cgcccgcggc cgccggcccc ggctggtccg
+    13081 cgggcgccgg tgtgctgctg ctggcgcgcc tgtccgccgc cccgcgcccc ggccccccgg
+    13141 tgctggccgt ggtccggggc gccgccgtgc ccccggccgg ggcgcgccgc cggctgccgg
+    13201 ctccccccgg cccctcgccg ccgcgggtgc tccgcgccgc gctgcgcccc gccggcctgt
+    13261 ccgcggcggc tgtcgccgcg gtggcggccc ccggccccgg ccccccgctg ggcgcccccc
+    13321 tcgcggcccc ggcgctgctg gccccctccg gcccggcgcg cgccggcgcc gctcggccgt
+    13381 tgtggctggg ctcgttcccg tcgcccgtgg gtcccccgcc ggcggccgcg ggtgtgggtg
+    13441 gcgtcctccc gctggtgctg gcgctgcggc ccggtgtgct gccgccgccc ctgcctgtcg
+    13501 cggcgccgtc ggcgcccgtg gcctggtcgg cgggggcggt gtcgctgctg cccgcgtcgc
+    13561 ccccgtggcc ggcgccgggt gcgccgcgcc gggccggtgt gtcctcgttc ggtgtgcgcg
+    13621 ggccgcccgc gcctgtgctc ctggcgccgg ccccggcggc cgcggcggcc ggggccgctg
+    13681 cgcccgcggt cgccgccggt ccggtggcct gggtggtgtc gggccccggt gccgcggggc
+    13741 tgcgggcccc ggccgcgcgg ctgcgggcgt ccgtggccgg gcgttcggcg ctgggcgccg
+    13801 ccgctgtggc gcggtcgctg gtgctgcccc ggtcggtgct ggctccccgc gcggtgctgg
+    13861 tgggccgggc ccgggccgcg ttgctgtccg gtctgggcgc cgtcgcggcg ccgtccgctc
+    13921 ttccgggcgt ggtggtgggc gcgcgcgcgc ctcccggccg ttcggtgttt gtgttcccgg
+    13981 ggccgggggc gccgtgggtg ggtctggccg tggggttgtt ggcgtcctcg ccggtgttcg
+    14041 cggcggcggt tggtgcgtgt gcggcggcgc tgtcggcgtc tgtggcctgg tcgttgccgg
+    14101 gtgtgttgcg tggtgttgcg ggtgcgcctg gttttgctcg ggtggctgtg gtgccgccgg
+    14161 tgttgtttgc ggtgctggtg tcgttggcgc ggttgtggcg ttcggtgggt gtggcgccgg
+    14221 ctgcggtgct gggtcctcgt ccgggtgcgc ttgctgcggc gtgtgtggcg ggtgggttgt
+    14281 cgctggcggc tgccgcgccg gtggtggcgt tgcggtcgcc ggcgctcgcg gtggggcttg
+    14341 ctggtcgtgg tggcctggtg tcggtcgggt tgtccgcggc gccggcggcg gcgcgtctcg
+    14401 cccggtgggg tggggcgctt tcggtggcgg cggtccctgg tccgggttcg gtcgtggtgg
+    14461 ccggtgcccc ggccgcgctg gctgcgctgg ttgcggcgct ggcgggtgcg gcggtgcggg
+    14521 tccgtcgggt tccggtggcc tctgcctcgc cttccgcgcc tgtggcgggg cttcgtgcgg
+    14581 cgctgctgcg ggttctggcg gcccttccgc cgcggtcctc ggcggtgccg ttctcctcgc
+    14641 cggtgcccgg tgcgctggtg gccccggctc cgctggccgc cgcgtcctgg tcccggcccc
+    14701 tgcggccgcc ggttgcgctg gcgtccccgc ctcgcccgct gctcgccgcg ggccccccgt
+    14761 gttcctcgcg gtccgcccgc ctccggtgct gccccttccg gtgccgccgc ccgttgcggc
+    14821 cgctgcgtcg cgggccgtgg tcgtggggcc cctccggcgc gctgcgggcg gggccgcgcg
+    14881 gttcctgccc tccgccgctg cgcttcccgt ccgcggggcg cgcgttgcct ggcccccggt
+    14941 gttcgccggc cccggcgccc cccgcgttgc cttgccgccc tccgccttcc cgcccgcgcg
+    15001 cttctggctt gccgctcccg ccggtgtggg tgctgtgggt tcggtggggt tgggttcgct
+    15061 ggggcctccg ttgctgggtg cggtggtgtc gttggcgcgt ggtggcgggg tgctgctgcg
+    15121 tgggcggttg tcgttggccc cgcctgcgtg gctggcggct cccgccgtcc ccggggtgct
+    15181 gctgctgccg gggccggcgt tcgtcgcgct ggtggtccgg gcgggcgctc cggtcggctg
+    15241 cggccgggtc gcggccctgg tcctcgccgc gccgctgctc gtgcccgcgc cgggtggcgt
+    15301 ccccctcccg gttgcggtgg gggcggccgc cgcttccggc ttccgtgcgg tgcgcgtgtc
+    15361 ctcgcgggcg gcggcggccg gcgctggcgc ggcctgggtg cggcctgccc ctggtgtgct
+    15421 cggttcggcc gtgccccgct ccgcgccccc gtccgccttt ggtgtgtggc ctccggtggg
+    15481 ggctgcgttg gttgctgtgt cgggtgcgtc tgtgcgggct gcggcgcccg ggttggcgtc
+    15541 tgggcctgtt tttccggggt tgcggcgtgc gtggcggcgt gctggtgcgg t
+//

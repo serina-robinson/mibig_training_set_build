@@ -1,10 +1,8 @@
 ## Install packages
 pacman::p_load('ape', 'tidymodels', 'data.table', 'caret', 'tidyverse', 'readxl', 'stringr', 'Biostrings', 'DECIPHER', 'phangorn', 'ggplot2', 'seqinr', 'bgafun')
-library(devtools)
-source_gist("https://gist.github.com/mrdwab/6424112")
 
 # Set working directory
-setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build/")
+setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")
 
 # Read in the 575 training set seqs
 training_sqs <- readAAStringSet('data/575_training_seqs_including_mibig.fasta')
