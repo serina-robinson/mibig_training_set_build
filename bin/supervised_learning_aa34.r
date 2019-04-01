@@ -5,15 +5,15 @@ pacman::p_load("caret", "cowplot", "tidymodels", "ranger", "tree", "rsample", "t
 setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")
 
 # Read in the data
-rawdat <- read_csv("data/713_seqs_136_feats_for_supervised.csv")
+rawdat <- read_csv("data/797_seqs_136_feats_for_supervised_20190328.csv")
 colnames(rawdat)[1] <- "nms"
-rawdat$clf <- word(rawdat$nms, -1, sep = "_")
+rawdat$clf <- word(rawdat$nms, -3, sep = "_")
 
 # Remove the holdout test predictions
-dat <- rawdat[-grep(paste0(c("HOLDOUT", "OTHER"), collapse = "|"), rawdat$nms),] # 658 observations
+dat <- rawdat[-grep(paste0(c("HOLDOUT", "OTHER", "CAR"), collapse = "|"), rawdat$nms),] # 658 observations
 
 # Set seed 
-set.seed(20190503)
+set.seed(20192603)
 
 # Split into test and training data
 dat_split <- initial_split(dat, strata = "clf")
@@ -81,12 +81,24 @@ getTrainPerf(rf)
 # Select the same features in the test set
 
 # Try prediction
-rf_ml <- ranger(y_train ~., data = form_train, num.trees = 500, splitrule = "gini", mtry = 69,
+
+
+rf_ml <- ranger(y_train ~., data = form_train, num.trees = 500, splitrule = as.character(rf$bestTune$splitrule), 
+                mtry = rf$bestTune$mtry, min.node.size = rf$bestTune$min.node.size,
                 importance = "permutation")
-rf_pred <- predict(rf_ml, data = form_test)
+# saveRDS(rf_ml, "output/rf_functional_class_20192803.rds")
+rf_ml <- readRDS("output/rf_small_subst_grp_20192803.rds")
+
+alldat <- data.frame(bind_rows(form_train, form_test))
+actual_clf <- c(as.character(y_train), as.character(y_test))
+nms <- c(dat_train$nms, dat_test$nms)
+nms
+
+rf_pred <- predict(rf_ml, data = alldat)
+length(rf_pred$predictions)
 
 
-cm_rf <- confusionMatrix(rf_pred$predictions, as.factor(dat_test$clf))
+cm_rf <- confusionMatrix(rf_pred$predictions, as.factor(actual_clf))
 cm_rf
 
 sink("data/cm_rf_feat_select.txt")
@@ -113,13 +125,27 @@ ggsave("data/rf_feat_select_var_imp.jpeg")
 dev.off()
 
 
-dtl_feat_select <- data.frame(round(cm_rf$byClass[,colnames(cm_rf$byClass) %in% c("Precision", "Recall", "Balanced Accuracy")], 2))
-write.csv(dtl_feat_select, "output/AA34_Precision_Recall_Accuracy_Substrate_group.csv", row.names = T)
+# dtl_feat_select <- data.frame(round(cm_rf$byClass[,colnames(cm_rf$byClass) %in% c("Precision", "Recall", "Balanced Accuracy")], 2))
+# write.csv(dtl_feat_select, "output/AA34_Precision_Recall_Accuracy_Substrate_group.csv", row.names = T)
 
+dtf <- data.frame(cbind(nms, as.character(rf_pred$predictions), as.character(actual_clf)), stringsAsFactors = F)
+dtf
+colnames(dtf) <- c("sqnams_tr", "pred", "actual")
+dtf_wrong <- dtf[dtf$pred != dtf$actual,]
+dtf_wrong
+ad <- read_csv("data/combined_adenylate_forming_training_set_20192703.csv")
+dtf_wrong
+
+ad_joined <- inner_join(dtf_wrong, ad, by = "sqnams_tr")
+dim(ad_joined)
+
+#ad_wrong <- data.frame(cbind(dtf_wrong[1:37,], ad[ad$sqnams_tr %in% dtf_wrong$nms,]))
+write_csv(ad_joined, "data/classification_group_predictions_20192803.csv")
 
 ## Make a heatmap of confusion matrix results
 
 cm_list <- list(cm_rf$table)
+
 names(cm_list) <- c("rf_aa_34")
 
 pllist <- list()
@@ -134,6 +160,7 @@ for(i in 1:length(cm_list)) {
   #axis.title.y = element_blank())
 }
 
+
 # jpeg("output/data_confusion_matrices.jpeg", width = 750, height = 500, res = 300)
 pllist[[1]]
-ggsave("aa34_group_conf_matrices.jpeg", height=4, width=5, units='in')
+ggsave("aa34_group_conf_matrices.jpeg", height=10, width=10, units='in')

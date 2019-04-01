@@ -184,3 +184,7 @@ bg3d("white")
 
 load("data/distmat.rda") 
 coord <- cluster.visualize(apset, clusters, size.cutoff=1, dimensions=3, quiet=TRUE) 
+
+
+p <- plot_ly(cdat, x = Comp.1 , y = Comp.2, text = rownames(carsDf),
+             mode = "markers", color = cluster_name, marker = list(size = 11))

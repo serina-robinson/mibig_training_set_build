@@ -37,8 +37,7 @@ mib <- read_excel("data/mibig_training_set_manually_edited_20192603.xlsx") %>%
                                    small_substrate_group, "_", large_substrate_group, "_", functional_class))
 
 # Read in the uniprot dataset
-cmbnd <- read_xlsx("data/anl_training_set_updated_20192703.xlsx") %>%
-  dplyr::filter(-grepl("coelent", 
+cmbnd <- read_excel("data/anl_training_set_updated_20192703.xlsx") %>%
   mutate(functional_class = str_replace_all(functional_class, "MMCS", "SACS")) %>%
   #mutate(sqnams_tr = paste0(1:nrow(.), "_", org_short, "_", substrate_group, "_", functional_class)) %>%
   dplyr::mutate(likely_substrate = substrate_condensed) %>%
@@ -64,10 +63,12 @@ cmbnd <- read_xlsx("data/anl_training_set_updated_20192703.xlsx") %>%
   dplyr::mutate(gene_names = case_when(functional_class == "BLS" ~ "polyolefin biosynthesis oleC",
                                                 TRUE ~ gene_names)) %>%
   dplyr::mutate(entry_name = case_when(functional_class == "BLS" ~ word(protein_names, 1, sep = " "),
-                                       TRUE ~ entry_name))
+                                       TRUE ~ entry_name)) %>%
+  dplyr::rename(acc = entry_name)
 
 
-
+inds <- which(cmbnd$acc == "NA")
+cmbnd$acc[inds] <- word(cmbnd$protein_names[inds], sep = " ", 1)
 cmbnd$functional_class[cmbnd$functional_class == "PEPTIDE"] <- "NRPS"
 cmbnd$functional_class[cmbnd$functional_class == "VLACS_BILE"] <- "VLACSBILE"
 cmbnd$functional_class[cmbnd$functional_class == "FAT"] <- "VLACSBILE"
@@ -105,12 +106,12 @@ cmbnd_fix <- cmbnd %>%
                                                   small_substrate_group == "C13.through.C17" ~ "longchain",
                                                   small_substrate_group == "C18.and.up.or.bile.acid" ~ "verylongchainbile",
                                                   TRUE ~ large_substrate_group)) %>%
-  dplyr::mutate(sqnams_tr = paste0(entry_name, "_", word(organism, 1, sep = " "), "_", word(organism, 2, sep = " "), "_",
+  dplyr::mutate(sqnams_tr = paste0(acc, "_", word(organism, 1, sep = " "), "_", word(organism, 2, sep = " "), "_",
                                    small_substrate_group, "_", large_substrate_group, "_", functional_class)) %>%
   bind_rows(., mib) %>%
   dplyr::filter(functional_class != "HOLDOUTTEST") %>%
   # mutate(small_substrate_group = case_when(small_substrate_group == "C9.through.C12" ~ "C6.through.C12"))
-  dplyr::select(data_source, entry_name, acc, organism, protein_names, likely_substrate, substrate, small_substrate_group, large_substrate_group, functional_class,
+  dplyr::select(data_source, acc, acc, organism, protein_names, likely_substrate, substrate, small_substrate_group, large_substrate_group, functional_class,
                 bgcs, pmid, cmpnd, pdb_id, kinetics, ec_numbers, title, sqnams_tr, aa_seq)
 
 
@@ -141,7 +142,8 @@ seqs_add <- seqs_include %>%
   dplyr::rename(pmid = pub_med_id,
                 aa_seq = sequence) %>%
   dplyr::select(data_source, entry_name, organism, protein_names, likely_substrate, substrate, small_substrate_group, large_substrate_group, functional_class,
-                pmid, kinetics, sqnams_tr, aa_seq)
+                pmid, kinetics, sqnams_tr, aa_seq) %>%
+  dplyr::rename(acc = entry_name)
 
 
 cmbnd_coums <- cmbnd_fix %>%
@@ -149,30 +151,11 @@ cmbnd_coums <- cmbnd_fix %>%
 
 table(cmbnd_coums$small_substrate_group)
 table(cmbnd_coums$large_substrate_group)
+table(cmbnd_coums$functional_class)
+# cmbnd_coums[cmbnd_coums$functional_class == "VLACS_BILE",]
+
+cmbnd_coums$organism <- gsub("_", " ", cmbnd_coums$organism)
+cmbnd_coums$sqnams_tr <- gsub(" ", "_", cmbnd_coums$sqnams_tr)
 dim(cmbnd_coums)
-
-# cmbnd_coums$bgcs[cmbnd_coums$small_substrate_group == "]
-
-cmbnd_coums$entry_name[cmbnd_coums$small_substrate_group == "amino.acid"]
-
-table(cmbnd_coums$small_substrate_group)
-
-write_csv(cmbnd_coums, "data/combined_adenylate_forming_training_set_20192703.csv")
-
-
-
-# dala <- AAStringSet(cmbnd_coums$aa_seq[cmbnd_coums$likely_substrate == "dalanine"])
-# names(dala) <- cmbnd_coums$entry_name[cmbnd_coums$likely_substrate == "dalanine"]
-# writeXStringSet(dala, filepath = "/Users/robi0916/Documents/Command_line_tools/NRPSpredictor2_20111113/d_ala_activating.fa")
-
-# coums_onegen <- coums_nodup %>%
-#   dplyr::mutate(Genus = word(Organism, sep = " ", 1)) %>%
-#   #dplyr::filter(Status == "reviewed")
-#   dplyr::group_by(Genus) %>%
-#   dplyr::slice(1)
-
-# coums_nodup$Organism
-
-
-# Read in the final training set
+# write_csv(cmbnd_coums, "data/combined_adenylate_forming_training_set_20192703.csv")
 

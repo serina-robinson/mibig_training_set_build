@@ -10,7 +10,7 @@ color_pcoa_points <- function(namvec, dat, pal) {
     inds <- grep(namvec[i], rownames(dat))
     colrs[inds] <- pal[i]
     alph[inds] <- 1
-    sz[inds] <- 2
+    # sz[inds] <- 2
     nms[inds] <- namvec[i]
   }
   

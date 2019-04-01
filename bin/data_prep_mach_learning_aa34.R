@@ -5,25 +5,27 @@ pacman::p_load("DECIPHER", "data.table", "Biostrings", "caret", "bgafun", "cowpl
 setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")
 
 # Read in the training set
-rawdat <- readAAStringSet("data/713_total_training_sqs_including_NRPS.fa")
+# origdat <- readAAStringSet("data/676_training_set_to_extract_34aa_20192703.faa")
+rawdat <- readAAStringSet("data/669_training_set_34aa_extracted_20192703.faa")
+length(rawdat)
 clf <- word(names(rawdat), -1, sep = "_")
-table(clf)
-subst <- word(names(rawdat), -2, sep = "_")
+subst1<- word(names(rawdat), -2, sep = "_")
+subst2<- word(names(rawdat), -3, sep = "_")
 
-# Ran antismash extract 34 aa extract_34_aa_serina.py script 
-ex34 <- fread('../sandpuma2_serina/flat/713_aa34_signatures.fa', header = F, data.table = F)
-ex34
-ex34_gsub <- gsub("-", "X", ex34[662,1])
-ex34_gsub
-aa34 <- AAStringSet(ex34_gsub)
-length(aa34)
+# Read in the NRPS training set
+aa_dat <- readAAStringSet("data/adom_signatures_one_per_class_34aa_20190328.faa")
+names(aa_dat) <- paste0(names(aa_dat), "_amino.acid_aminoacid_NRPS")
+clf <- word(names(aa_dat), -1, sep = "_")
+subst1<- word(names(aa_dat), -2, sep = "_")
+subst2<- word(names(aa_dat), -3, sep = "_")
 
-names(aa34) <- names(rawdat)
-writeXStringSet(aa34, 'data/713_aa34_gaps_removed_signatures.fa')
-# readAAStringSet('data/713_aa34_signatures.fa')
+# Combine the two
+comb <- AAStringSet(c(rawdat, aa_dat))
+length(comb)
+writeXStringSet(comb, "data/793_aa34_signatures_20190329.fa")
 
 # Convert the 713 aa signatures to features
-rdaln <- read.alignment(file = 'data/713_aa34_signatures.fa', format = "fasta")
+rdaln <- read.alignment(file = 'data/793_aa34_signatures_20190329.fa', format = "fasta")
 rdaln$seq <- toupper(rdaln$seq)
 aa <- bgafun::convert_aln_AAP(rdaln) #5 physicochemical properties
 
@@ -42,8 +44,8 @@ colnames(aap) <- gsub("^X","",colnames(aap))
 colnames(aap) <- paste0(c("polrty", "secstr", "molsz", "elechrg"), "_", colnames(aap))
 numfeats <- length(colnames(aap)) # 1096
 colnames(aap)
+dim(aap)
 
-
+dim(aap)
 # Write to CSV file
-write.csv(aap, paste0("data/713_seqs_", numfeats, "_feats_for_supervised.csv"), row.names=rownames(aap), quote = F)
-# 136 sequences
+write.csv(aap, paste0("data/793_seqs_136_feats_for_supervised_20190329.csv"), row.names=rownames(aap), quote = F)
