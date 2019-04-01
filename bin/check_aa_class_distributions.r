@@ -47,6 +47,10 @@ dtf$lrg_subst <- gsub("_", "\\.", dtf$lrg_subst)
 head(dtf)
 names(adoms) <- paste0(names(adoms), "_", dtf$lrg_subst)
 head(names(adoms))
+names(adoms) <- gsub(" ", "_", names(adoms))
+names(adoms) <- gsub("____", "_", names(adoms))
+table(word(names(adoms), sep ="_", -1))
+
 writeXStringSet(adoms, "data/sp2_34extract_names_fixed_large_grps.faa")
 # write_csv(data.frame(table(dtf$lrg_subst)), "output/not_included.csv")
 
