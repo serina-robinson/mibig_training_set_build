@@ -1,0 +1,214 @@
+Confusion Matrix and Statistics
+
+                                            Reference
+Prediction                                   aryl.and.biaryl.derivatives
+  aryl.and.biaryl.derivatives                                         17
+  bulky.mainly.phenyl.derivatives.aa                                   0
+  C12.through.C17                                                      1
+  C18.and.up.or.bile.acid                                              0
+  C2.through.C5                                                        0
+  C6.through.C11                                                       0
+  cinnamate.and.succinylbenzoate.derivatives                           1
+  cyclic.aliphatic.aa                                                  0
+  cysteine.aa                                                          0
+  luciferin                                                            1
+  median.beta.hydroxyacid                                              0
+  polar.and.charged.aa                                                 1
+  small.hydrophilic.aa                                                 1
+  small.hydrophobic.aa                                                 0
+  tiny.aa                                                              0
+                                            Reference
+Prediction                                   bulky.mainly.phenyl.derivatives.aa
+  aryl.and.biaryl.derivatives                                                 0
+  bulky.mainly.phenyl.derivatives.aa                                         53
+  C12.through.C17                                                             1
+  C18.and.up.or.bile.acid                                                     0
+  C2.through.C5                                                               0
+  C6.through.C11                                                              1
+  cinnamate.and.succinylbenzoate.derivatives                                  0
+  cyclic.aliphatic.aa                                                         0
+  cysteine.aa                                                                 0
+  luciferin                                                                   0
+  median.beta.hydroxyacid                                                     0
+  polar.and.charged.aa                                                        4
+  small.hydrophilic.aa                                                        1
+  small.hydrophobic.aa                                                        4
+  tiny.aa                                                                     0
+                                            Reference
+Prediction                                   C12.through.C17 C18.and.up.or.bile.acid
+  aryl.and.biaryl.derivatives                              1                       0
+  bulky.mainly.phenyl.derivatives.aa                       1                       0
+  C12.through.C17                                         12                       5
+  C18.and.up.or.bile.acid                                  1                      13
+  C2.through.C5                                            0                       0
+  C6.through.C11                                           2                       0
+  cinnamate.and.succinylbenzoate.derivatives               3                       0
+  cyclic.aliphatic.aa                                      0                       0
+  cysteine.aa                                              0                       0
+  luciferin                                                0                       0
+  median.beta.hydroxyacid                                  0                       0
+  polar.and.charged.aa                                     0                       0
+  small.hydrophilic.aa                                     1                       0
+  small.hydrophobic.aa                                     0                       0
+  tiny.aa                                                  0                       0
+                                            Reference
+Prediction                                   C2.through.C5 C6.through.C11
+  aryl.and.biaryl.derivatives                            0              0
+  bulky.mainly.phenyl.derivatives.aa                     0              0
+  C12.through.C17                                        2              2
+  C18.and.up.or.bile.acid                                0              0
+  C2.through.C5                                         10              0
+  C6.through.C11                                         1              5
+  cinnamate.and.succinylbenzoate.derivatives             1              1
+  cyclic.aliphatic.aa                                    0              0
+  cysteine.aa                                            0              0
+  luciferin                                              0              1
+  median.beta.hydroxyacid                                1              0
+  polar.and.charged.aa                                   1              0
+  small.hydrophilic.aa                                   0              0
+  small.hydrophobic.aa                                   0              0
+  tiny.aa                                                0              0
+                                            Reference
+Prediction                                   cinnamate.and.succinylbenzoate.derivatives
+  aryl.and.biaryl.derivatives                                                         1
+  bulky.mainly.phenyl.derivatives.aa                                                  0
+  C12.through.C17                                                                     0
+  C18.and.up.or.bile.acid                                                             0
+  C2.through.C5                                                                       1
+  C6.through.C11                                                                      1
+  cinnamate.and.succinylbenzoate.derivatives                                         18
+  cyclic.aliphatic.aa                                                                 0
+  cysteine.aa                                                                         0
+  luciferin                                                                           3
+  median.beta.hydroxyacid                                                             1
+  polar.and.charged.aa                                                                1
+  small.hydrophilic.aa                                                                0
+  small.hydrophobic.aa                                                                0
+  tiny.aa                                                                             0
+                                            Reference
+Prediction                                   cyclic.aliphatic.aa cysteine.aa luciferin
+  aryl.and.biaryl.derivatives                                  0           0         0
+  bulky.mainly.phenyl.derivatives.aa                           0           0         0
+  C12.through.C17                                              0           0         0
+  C18.and.up.or.bile.acid                                      0           0         0
+  C2.through.C5                                                0           0         0
+  C6.through.C11                                               0           0         0
+  cinnamate.and.succinylbenzoate.derivatives                   0           0         1
+  cyclic.aliphatic.aa                                          9           0         0
+  cysteine.aa                                                  0          14         0
+  luciferin                                                    0           0        17
+  median.beta.hydroxyacid                                      0           0         0
+  polar.and.charged.aa                                         0           0         0
+  small.hydrophilic.aa                                         2           1         0
+  small.hydrophobic.aa                                         0           1         0
+  tiny.aa                                                      0           0         0
+                                            Reference
+Prediction                                   median.beta.hydroxyacid polar.and.charged.aa
+  aryl.and.biaryl.derivatives                                      0                    0
+  bulky.mainly.phenyl.derivatives.aa                               0                    6
+  C12.through.C17                                                  1                    0
+  C18.and.up.or.bile.acid                                          0                    0
+  C2.through.C5                                                    0                    0
+  C6.through.C11                                                   0                    0
+  cinnamate.and.succinylbenzoate.derivatives                       0                    0
+  cyclic.aliphatic.aa                                              0                    2
+  cysteine.aa                                                      0                    0
+  luciferin                                                        0                    0
+  median.beta.hydroxyacid                                         10                    0
+  polar.and.charged.aa                                             0                   69
+  small.hydrophilic.aa                                             0                    2
+  small.hydrophobic.aa                                             0                    1
+  tiny.aa                                                          0                    0
+                                            Reference
+Prediction                                   small.hydrophilic.aa small.hydrophobic.aa tiny.aa
+  aryl.and.biaryl.derivatives                                   2                    0       0
+  bulky.mainly.phenyl.derivatives.aa                            2                    1       0
+  C12.through.C17                                               1                    0       0
+  C18.and.up.or.bile.acid                                       0                    0       0
+  C2.through.C5                                                 0                    0       0
+  C6.through.C11                                                0                    0       0
+  cinnamate.and.succinylbenzoate.derivatives                    0                    0       0
+  cyclic.aliphatic.aa                                           0                    1       0
+  cysteine.aa                                                   0                    0       0
+  luciferin                                                     0                    0       0
+  median.beta.hydroxyacid                                       0                    0       0
+  polar.and.charged.aa                                          0                    0       0
+  small.hydrophilic.aa                                         42                    0       0
+  small.hydrophobic.aa                                          2                   43       0
+  tiny.aa                                                       0                    1      18
+
+Overall Statistics
+                                          
+               Accuracy : 0.8235          
+                 95% CI : (0.7839, 0.8586)
+    No Information Rate : 0.1882          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.8036          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: aryl.and.biaryl.derivatives
+Sensitivity                                     0.77273
+Specificity                                     0.99007
+Pos Pred Value                                  0.80952
+Neg Pred Value                                  0.98762
+Prevalence                                      0.05176
+Detection Rate                                  0.04000
+Detection Prevalence                            0.04941
+Balanced Accuracy                               0.88140
+                     Class: bulky.mainly.phenyl.derivatives.aa Class: C12.through.C17
+Sensitivity                                             0.8281                0.57143
+Specificity                                             0.9723                0.96782
+Pos Pred Value                                          0.8413                0.48000
+Neg Pred Value                                          0.9696                0.97750
+Prevalence                                              0.1506                0.04941
+Detection Rate                                          0.1247                0.02824
+Detection Prevalence                                    0.1482                0.05882
+Balanced Accuracy                                       0.9002                0.76963
+                     Class: C18.and.up.or.bile.acid Class: C2.through.C5 Class: C6.through.C11
+Sensitivity                                 0.72222              0.62500               0.55556
+Specificity                                 0.99754              0.99756               0.98798
+Pos Pred Value                              0.92857              0.90909               0.50000
+Neg Pred Value                              0.98783              0.98551               0.99036
+Prevalence                                  0.04235              0.03765               0.02118
+Detection Rate                              0.03059              0.02353               0.01176
+Detection Prevalence                        0.03294              0.02588               0.02353
+Balanced Accuracy                           0.85988              0.81128               0.77177
+                     Class: cinnamate.and.succinylbenzoate.derivatives
+Sensitivity                                                    0.69231
+Specificity                                                    0.98246
+Pos Pred Value                                                 0.72000
+Neg Pred Value                                                 0.98000
+Prevalence                                                     0.06118
+Detection Rate                                                 0.04235
+Detection Prevalence                                           0.05882
+Balanced Accuracy                                              0.83738
+                     Class: cyclic.aliphatic.aa Class: cysteine.aa Class: luciferin
+Sensitivity                             0.81818            0.87500          0.94444
+Specificity                             0.99275            1.00000          0.98771
+Pos Pred Value                          0.75000            1.00000          0.77273
+Neg Pred Value                          0.99516            0.99513          0.99752
+Prevalence                              0.02588            0.03765          0.04235
+Detection Rate                          0.02118            0.03294          0.04000
+Detection Prevalence                    0.02824            0.03294          0.05176
+Balanced Accuracy                       0.90547            0.93750          0.96608
+                     Class: median.beta.hydroxyacid Class: polar.and.charged.aa
+Sensitivity                                 0.90909                      0.8625
+Specificity                                 0.99517                      0.9797
+Pos Pred Value                              0.83333                      0.9079
+Neg Pred Value                              0.99758                      0.9685
+Prevalence                                  0.02588                      0.1882
+Detection Rate                              0.02353                      0.1624
+Detection Prevalence                        0.02824                      0.1788
+Balanced Accuracy                           0.95213                      0.9211
+                     Class: small.hydrophilic.aa Class: small.hydrophobic.aa Class: tiny.aa
+Sensitivity                              0.85714                      0.9348        1.00000
+Specificity                              0.97872                      0.9789        0.99754
+Pos Pred Value                           0.84000                      0.8431        0.94737
+Neg Pred Value                           0.98133                      0.9920        1.00000
+Prevalence                               0.11529                      0.1082        0.04235
+Detection Rate                           0.09882                      0.1012        0.04235
+Detection Prevalence                     0.11765                      0.1200        0.04471
+Balanced Accuracy                        0.91793                      0.9568        0.99877

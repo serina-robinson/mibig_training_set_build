@@ -24,40 +24,44 @@ aa_rem <- aa_dat[subst2 != "reject"]
 # Combine the two
 comb <- AAStringSet(c(rawdat, aa_rem))
 length(comb)
-writeXStringSet(comb, "data/1743_aa34_signatures_20190104.fa")
+# writeXStringSet(comb, "data/1743_aa34_signatures_20190104.fa")
 
 # Convert the 713 aa signatures to features
-rdaln <- read.alignment(file = 'data/1743_aa34_signatures_20190104.fa', format = "fasta")
-rdaln$seq <- toupper(rdaln$seq)
-aa <- bgafun::convert_aln_AAP(rdaln) #5 physicochemical properties
-aadf <- data.frame(aa, stringsAsFactors = F)
-
-aap <- aadf %>%
-  dplyr::mutate(nms = rownames(.)) %>%
-  dplyr::select(-contains("D")) %>%
-  dplyr::filter(!grepl("ERROR", X1A)) %>%
-  dplyr::filter(word(nms, -3, sep = "_") != "amino.acid")
-
-rownames(aap) <- aap$nms
-# table(word(aap$nms, -3, sep = "_"))
-
-aap <- aap %>%
-  dplyr::select(-nms)
-colnames(aap) <- gsub("^X","",colnames(aap))
-
-colnames(aap) <- paste0(c("polrty", "secstr", "molsz", "elechrg"), "_", colnames(aap))
-numfeats <- length(colnames(aap)) # 1096
-colnames(aap)
-dim(aap)
+# rdaln <- read.alignment(file = 'data/1743_aa34_signatures_20190104.fa', format = "fasta")
+# rdaln$seq <- toupper(rdaln$seq)
+# 
+# str(rdaln)
+# source("src/convert_aln_15aap.r")
+# aa <- convert_aln_15AAP(rdaln) #5 physicochemical properties
+# aadf <- data.frame(aa, stringsAsFactors = F)
+# 
+# colnames(aap)
+# aap <- aadf %>%
+#   dplyr::mutate(nms = rownames(.)) %>%
+#   # dplyr::select(-contains("D")) %>%
+#   dplyr::filter(!grepl("ERROR", X1_WOLS870101)) %>%
+#   dplyr::filter(word(nms, -3, sep = "_") != "amino.acid")
+# 
+# rownames(aap) <- aap$nms
+# # table(word(aap$nms, -3, sep = "_"))
+# 
+# aap <- aap %>%
+#   dplyr::select(-nms)
+# colnames(aap) <- gsub("^X","",colnames(aap))
+# 
+# # colnames(aap) <- paste0(c("polrty", "secstr", "molsz", "elechrg"), "_", colnames(aap))
+# numfeats <- length(colnames(aap)) # 1096
+# colnames(aap)
+# dim(aap)
 
 # Write to CSV file
-write.csv(aap, paste0("data/1720_seqs_136_feats_for_supervised_20190104.csv"), row.names=rownames(aap), quote = F)
+# write.csv(aap, paste0("data/1720_seqs_510_feats_for_supervised_20190104.csv"), row.names=rownames(aap), quote = F)
 
 # Read in the data
-rawdat <- read_csv("data/1720_seqs_136_feats_for_supervised_20190104.csv")
+rawdat <- read_csv("data/1720_seqs_510_feats_for_supervised_20190104.csv")
+rawdat <- data.frame(cbind(rawdat$X1), scale(rawdat[,2:ncol(rawdat)]), stringsAsFactors = F)
 colnames(rawdat)[1] <- "nms"
 rawdat$clf <- word(rawdat$nms, -3, sep = "_")
-table(rawdat$clf)
 
 # Remove the holdout test predictions
 dat <- rawdat[-grep(paste0(c("HOLDOUT", "OTHER", "CAR"), collapse = "|"), rawdat$nms),] # 658 observations
@@ -118,6 +122,7 @@ approx_roc_curve <- function(x, label) {
     roc_curve(obs, y_train) %>%
     mutate(model = label)
 }
+saveRDS(rf, "output/rf_xvalidated_small_subst_grp_20190104.rds")
 
 # ROC curve is not looking good...
 approx_roc_curve(rf, "Random Forest") %>%
@@ -134,8 +139,8 @@ getTrainPerf(rf)
 rf_ml <- ranger(y_train ~., data = form_train, num.trees = 500, splitrule = as.character(rf$bestTune$splitrule), 
                 mtry = rf$bestTune$mtry, min.node.size = rf$bestTune$min.node.size,
                 importance = "permutation")
-saveRDS(rf_ml, "output/rf_small_subst_grp_20190104.rds")
-rf_ml <- readRDS("output/rf_small_subst_grp_20190104.rds")
+saveRDS(rf_ml, "output/rf_final_small_subst_grp_20190104.rds")
+rf_ml <- readRDS("output/rf_final_small_subst_grp_20190104.rds")
 
 # If you want to make predictions on all data
 # alldat <- data.frame(bind_rows(form_train, form_test))
@@ -159,13 +164,13 @@ rf_pred <- predict(rf, newdata = form_test)
 cm_rf <- confusionMatrix(rf_pred, as.factor(dat_test$clf))
 cm_rf
 
-sink("data/cm_rf_substrate_small_grp.txt")
+sink("data/cm_rf_15aa_substrate_small_grp_20190104.txt")
 cm_rf
 sink()
 
-sink("data/cm_rf_feat_select.txt")
-print(cm_rf)
-sink()
+# sink("data/cm_rf_feat_select.txt")
+# print(cm_rf)
+# sink()
 
 vimp <- data.frame(cbind(sort(rf_ml$variable.importance, decreasing = T), 
                          names(sort(rf_ml$variable.importance, decreasing = T))), stringsAsFactors = F) %>%
@@ -175,7 +180,7 @@ vimp <- data.frame(cbind(sort(rf_ml$variable.importance, decreasing = T),
   dplyr::slice(1:25)
 vimp
 
-pdf("data/rf_feat_select_var_imp.pdf", width = 6, height = 6)
+pdf("data/rf_feat_select_var_imp_20190104.pdf", width = 6, height = 6)
 ggplot(data = vimp, 
        aes(x=reorder(variable,importance), y=importance, fill=importance))+ 
   geom_bar(stat="identity", position="dodge")+ coord_flip()+
@@ -194,7 +199,6 @@ dev.off()
 ## Make a heatmap of confusion matrix results
 
 cm_list <- list(cm_rf$table)
-
 names(cm_list) <- c("rf_aa_34")
 
 pllist <- list()
@@ -212,4 +216,4 @@ for(i in 1:length(cm_list)) {
 
 # jpeg("output/data_confusion_matrices.jpeg", width = 750, height = 500, res = 300)
 pllist[[1]]
-ggsave("aa34_group_conf_matrices.jpeg", height=10, width=10, units='in')
+ggsave("aa34_group_conf_matrices_with_NRPS_15aa_20190104.jpeg", height=10, width=10, units='in')

@@ -108,7 +108,9 @@ for(i in 1:5) {
 }
 
 
-
+pdf("data/15properties_PCA_condensed.pdf")
+pl[[1]][[2]]
+dev.off()
 
 pdf("data/15properties_PCA_aa_plot.pdf", width = 50, height = 50)
 plot_grid(pl[[1]][[1]], pl[[1]][[2]], pl[[1]][[3]], pl[[1]][[4]], pl[[1]][[5]],

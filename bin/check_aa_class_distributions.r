@@ -11,6 +11,7 @@ aaex <- read_excel("data/aa_cleaned_up_serina_min_grp_size_50.xlsx") %>%
   map_df(tolower) %>%
   modify_at(1:8, ~ stringr::str_replace_all(., c("\\|" = "_")))
 dim(aaex)
+
 # map_df(~ gsub("-", "\\|",.x))
 head(aaex)
 colnames(aaex)
@@ -43,6 +44,7 @@ for(j in 1:ncol(aaex))  {
     }
   }
 }
+
 dtf$lrg_subst <- gsub("_", "\\.", dtf$lrg_subst)
 head(dtf)
 names(adoms) <- paste0(names(adoms), "_", dtf$lrg_subst)
@@ -51,8 +53,26 @@ names(adoms) <- gsub(" ", "_", names(adoms))
 names(adoms) <- gsub("____", "_", names(adoms))
 table(word(names(adoms), sep ="_", -1))
 
-writeXStringSet(adoms, "data/sp2_34extract_names_fixed_large_grps.faa")
-# write_csv(data.frame(table(dtf$lrg_subst)), "output/not_included.csv")
+tbdf <- data.frame(table(word(names(adoms), sep ="_", -1)))
+tbdf <- tbdf[order(tbdf$Var1),]
 
+all_members <- apply(aaex, 2, function(x) { paste0(na.omit(x), collapse = ", ") })
+all_members <- gsub("_", "\\|", all_members)
+all_members <- all_members[order(names(all_members))]
+all_members
+tbdf$members <- all_members
+tbdf
+
+write_csv(tbdf, "output/approx_large_aa_group_class_sizes.csv")
+sub_dict <- data.frame(cbind(word(names(adoms), sep = "_", 2), dtf$lrg_subst), stringsAsFactors = F) %>%
+  distinct()
+dim(sub_dict)
+head(sub_dict)
+write_delim(col_names = F, sub_dict, "data/aa_substrate_class_dict.txt")
+
+# writeXStringSet(adoms, "data/sp2_34extract_names_fixed_large_grps.faa")
+# write_csv(data.frame(table(dtf$lrg_subst)), "output/not_included.csv")
+# aa <- readAAStringSet("data/sp2_34extract_names_fixed_large_grps.faa")
+# names(aa)
 
 
