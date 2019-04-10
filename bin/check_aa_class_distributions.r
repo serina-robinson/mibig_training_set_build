@@ -17,12 +17,17 @@ head(aaex)
 colnames(aaex)
 
 # Read in the adoms
-adoms <- readAAStringSet("data/sp2_34extract_named.faa")
+adoms <- readAAStringSet("data/sp2.adomains.faa")
+names(adoms) <- gsub("\\\t", "_", names(adoms))
+names(adoms)
+# adoms <- readAAStringSet("data/sp2_34extract_named.faa")
 dtf <- data.frame(names(adoms), as.character(adoms), word(names(adoms), 2, sep = "_"), stringsAsFactors = F)
 colnames(dtf) <- c("nms", "aa_seq", "subst")
+head(dtf)
 
 # Create a new column for larger amino acid class
 dtf$subst <- tolower(dtf$subst)
+table(dtf$subst)
 dtf$subst <- gsub("\\|", "_", dtf$subst)
 dtf$subst <- gsub("tyr_boh-tyr", "boh-tyr_tyr", dtf$subst)
 dtf$subst <- gsub("tyr_phe", "phe_tyr", dtf$subst)
@@ -70,7 +75,8 @@ dim(sub_dict)
 head(sub_dict)
 write_delim(col_names = F, sub_dict, "data/aa_substrate_class_dict.txt")
 
-# writeXStringSet(adoms, "data/sp2_34extract_names_fixed_large_grps.faa")
+names(adoms)
+# writeXStringSet(adoms, "data/1093_sp2_full_length_names_fixed_large_grps.faa")
 # write_csv(data.frame(table(dtf$lrg_subst)), "output/not_included.csv")
 # aa <- readAAStringSet("data/sp2_34extract_names_fixed_large_grps.faa")
 # names(aa)

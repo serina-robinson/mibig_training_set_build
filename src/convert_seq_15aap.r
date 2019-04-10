@@ -1,12 +1,13 @@
 convert_seq_15aap <- function (x) 
 {
-  tmp <- read.csv("data/15_aa_physicochemical_properties.csv", stringsAsFactors = F)
-  tmpfin <- tmp[,3:17]
+  tmpfin <- read.csv("data/15_aa_properties_scaled.csv", stringsAsFactors = F) %>%
+    column_to_rownames(var = "AA_ABREV")
+
   aalist <- list()
   for(i in 1:nrow(tmpfin)) {
     aalist[[i]] <- as.numeric(dplyr::slice(tmpfin, i))
   }
-  names(aalist) <- tmp[,2]
+  names(aalist) <- rownames(tmpfin)
   
   gap <- rep(0, 15)
   

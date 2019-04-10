@@ -2,7 +2,7 @@
 pacman::p_load("caret", "Biostrings", "phangorn", "ape", "seqinr", "DECIPHER", "cowplot", "tidymodels", "ranger", "tree", "rsample", "tidyverse", "randomForest","gbm","nnet","e1071","svmpath","lars","glmnet","svmpath")
 
 # Set working directory
-setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")
+setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build/")
 
 # Read in the training set
 rawdat <- readAAStringSet("data/669_training_set_34aa_extracted_20192703.faa")

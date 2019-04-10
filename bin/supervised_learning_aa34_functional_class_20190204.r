@@ -5,17 +5,16 @@ pacman::p_load("caret", "Biostrings", "phangorn", "ape", "seqinr", "DECIPHER", "
 setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")
 
 # Read in the training set
-rawdat <- readAAStringSet("data/669_training_set_34aa_extracted_20192703.faa")
+rawdat <- readAAStringSet("data/669_training_set_to_extract_34aa_20192803.faa")
 length(rawdat)
-clf <- word(names(rawdat), -1, sep = "_")
-subst1<- word(names(rawdat), -2, sep = "_")
-subst2<- word(names(rawdat), -3, sep = "_")
+dat <- rawdat[-grep(paste0(c("HOLDOUT", "OTHER", "CAR", "amino.acid"), collapse = "|"), names(rawdat)),] # 658 observations
+clf <- word(names(dat), -1, sep = "_")
+subst1<- word(names(dat), -2, sep = "_")
+subst2<- word(names(dat), -3, sep = "_")
+table(subst2)
 
 # Read in the NRPS training set
-aa_dat <- readAAStringSet("data/sp2_34extract_names_fixed_large_grps.faa")
-ran_nums <- sample(1:length(aa_dat), 150, replace = F)
-aa_dat <- aa_dat[ran_nums]
-
+aa_dat <- readAAStringSet("data/1093_sp2_full_length_names_fixed_large_grps.faa")
 names(aa_dat) <- paste0(names(aa_dat), "_aminoacid_NRPS")
 clf <- word(names(aa_dat), -1, sep = "_")
 subst1<- word(names(aa_dat), -2, sep = "_")
@@ -24,8 +23,13 @@ table(subst2)
 aa_rem <- aa_dat[subst2 != "reject"]
 
 # Combine the two
-comb <- AAStringSet(c(rawdat, aa_rem))
-length(comb)
+comb <- AAStringSet(c(dat, aa_rem))
+length(comb) # 1702 
+clf <- word(names(comb), -1, sep = "_")
+subst1<- word(names(comb), -2, sep = "_")
+subst2<- word(names(comb), -3, sep = "_")
+
+
 writeXStringSet(comb, "data/818_aa34_signatures_20190104.fa")
 
 # Convert the 713 aa signatures to features
@@ -47,7 +51,6 @@ rawdat$clf <- word(rawdat$nms, -1, sep = "_")
 table(rawdat$clf)
 
 # Remove the holdout test predictions
-dat <- rawdat[-grep(paste0(c("HOLDOUT", "OTHER", "CAR", "amino.acid"), collapse = "|"), rawdat$nms),] # 658 observations
 
 # Set seed 
 set.seed(20190304)
