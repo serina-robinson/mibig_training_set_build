@@ -34,10 +34,10 @@ aa <- convert_aln_15aap(rdaln) #5 physicochemical properties
 aadf <- data.frame(aa,stringsAsFactors = F)
 
 # Write to CSV file
-write.csv(aadf, paste0("data/1742_seqs_510_feats_for_supervised_20190204.csv"), row.names=rownames(aap), quote = F)
+write.csv(aadf, paste0("data/1742_seqs_510_feats_for_supervised_20192604.csv"), row.names=rownames(aap), quote = F)
 
 # Read in the data
-rawdat <- read_csv("data/1742_seqs_510_feats_for_supervised_20190204.csv")
+rawdat <- read_csv("data/1742_seqs_510_feats_for_supervised_20192604.csv")
 rawdat <- data.frame(cbind(rawdat$X1), scale(rawdat[,2:ncol(rawdat)]), stringsAsFactors = F)
 colnames(rawdat)[1] <- "nms"
 rawdat$clf <- word(rawdat$nms, -3, sep = "_")
@@ -69,6 +69,56 @@ df_train <- data.frame(x_train, stringsAsFactors = F, row.names = dat_train$nms)
 form_train <- data.frame(cbind(x_train, y_train), stringsAsFactors = F, row.names = dat_train$nms)
 form_test <- data.frame(cbind(x_test, y_test), stringsAsFactors = F, row.names = dat_test$nms)
 
+###==================================================================###
+###Naive Bayes method
+nb_grid <- expand.grid(usekernel = TRUE, fL = 0, adjust = 1)
+
+nb <- train(
+  x = df_train, 
+  y = y_train,
+  method = "nb",
+  tuneGrid = nb_grid,
+  trControl = trainControl(method = "repeatedcv", number = 10, 
+                           repeats = 3,
+                           verboseIter = T, classProbs = T,
+                           savePredictions = "final"))
+
+# Confusion matrix
+getTrainPerf(nb_ml)
+nb_ml$results
+
+# saveRDS(nb, "data/model_comparisons/nb_small_subst_group_20192604.rds")
+nb_ml <- readRDS("data/model_comparisons/nb_small_subst_group_20192604.rds")
+nb_pred <- predict(nb_ml, newdata = form_test)
+
+cm_nb <- confusionMatrix(nb_pred, as.factor(dat_test$clf))
+cm_nb
+sink("data/model_comparisons/cm_nb_15aa_functional_class_20192604.txt")
+cm_nb
+sink()
+
+dtl_feat_select <- data.frame(round(cm_nb$byClass[,colnames(cm_nb$byClass) %in% c("Precision", "Recall", "Balanced Accuracy")], 2))
+write.csv(dtl_feat_select, "data/model_comparisons/nb_AA34_Precision_Recall_Accuracy_Substrate_group.csv", row.names = T)
+
+## Make a heatmap of confusion matrix results
+cm_list <- list(cm_nb$table)
+names(cm_list) <- c("nb_aa_34")
+
+pllist <- list()
+for(i in 1:length(cm_list)) {
+  pllist[[i]] <- ggplot(data.frame(cm_list[[i]]), aes(Prediction, Reference)) +
+    geom_tile(aes(fill = Freq)) + 
+    geom_text(aes(label = round(Freq, 1))) +
+    scale_fill_gradient(low = "white", high = "red") +
+    ggtitle(names(cm_list)[i]) +
+    theme(axis.text.x = element_text(angle = 90), 
+          axis.title.x = element_blank())
+}
+
+pllist[[1]]
+ggsave("data/model_comparisons/aa34_nb_conf_matrices_subst_grp_20192604.jpeg", height=7, width=7, units='in')
+
+
 ####### Random Forest with feature selection ########
 # Random Forest using the ranger package for prediction
 # Fitting mtry = 2, splitrule = gini, min.node.size = 1 on full training set
@@ -84,9 +134,9 @@ rf <- train(
   # respect.unordered.factors = FALSE,
   verbose = TRUE,
   importance = "permutation",
-  preProcess = c("center", "scale"))
+  # preProcess = c("center", "scale"))
 
-saveRDS(rf, "data/model_comparisons/rf_xvalidated_small_subst_grp_20190204.rds")
+saveRDS(rf, "data/model_comparisons/rf_xvalidated_small_subst_grp_20192604.rds")
 
 # ROC curve
 approx_roc_curve <- function(x, label) {
@@ -112,7 +162,7 @@ approx_roc_curve <- function(x, label) {
     roc_curve(obs, y_train) %>%
     mutate(model = label)
 }
-saveRDS(rf, "data/model_comparisons/rf_xvalidated_small_subst_grp_20190204.rds")
+# saveRDS(rf, "data/model_comparisons/rf_xvalidated_small_subst_grp_20192604.rds")
 
 # ROC curve is not looking good...
 approx_roc_curve(rf, "Random Forest") %>%
@@ -127,13 +177,13 @@ getTrainPerf(rf)
 rf_ml <- ranger(y_train ~., data = form_train, num.trees = 500, splitrule = as.character(rf$bestTune$splitrule), 
                 mtry = rf$bestTune$mtry, min.node.size = rf$bestTune$min.node.size,
                 importance = "permutation")
-saveRDS(rf_ml, "data/model_comparisons/rf_small_subst_group_20190204.rds")
-rf_ml <- readRDS("data/model_comparisons/rf_small_subst_group_20190204.rds")
+saveRDS(rf_ml, "data/model_comparisons/rf_small_subst_group_20192604.rds")
+rf_ml <- readRDS("data/model_comparisons/rf_small_subst_group_20192604.rds")
 
 rf_pred <- predict(rf, newdata = form_test)
 cm_rf <- confusionMatrix(rf_pred, as.factor(dat_test$clf))
 
-sink("data/model_comparisons/cm_rf_15aa_functional_class_20190204.txt")
+sink("data/model_comparisons/cm_rf_15aa_functional_class_20192604.txt")
 cm_rf
 sink()
 
@@ -145,7 +195,7 @@ vimp <- data.frame(cbind(sort(rf_ml$variable.importance, decreasing = T),
   dplyr::slice(1:25)
 vimp
 
-pdf("data/model_comparisons/rf_feat_select_var_imp_small_subst_group_20190204.pdf", width = 6, height = 6)
+pdf("data/model_comparisons/rf_feat_select_var_imp_small_subst_group_20192604.pdf", width = 6, height = 6)
 ggplot(data = vimp, 
        aes(x=reorder(variable,importance), y=importance, fill=importance))+ 
   geom_bar(stat="identity", position="dodge")+ coord_flip()+
@@ -175,69 +225,7 @@ for(i in 1:length(cm_list)) {
 }
 
 pllist[[1]]
-ggsave("data/model_comparisons/aa34_rf_conf_matrices_subst_grp_20190204.jpeg", height=7, width=7, units='in')
-
-###==================================================================###
-###Naive Bayes method
-nb_grid <- expand.grid(usekernel = TRUE, fL = 0, adjust = 1)
-
-nb <- train(
-  x = df_train, 
-  y = y_train,
-  method = "nb",
-  tuneGrid = nb_grid,
-  trControl = trainControl(method = "cv", number = 10, 
-                           verboseIter = T, classProbs = T,
-                           savePredictions = "final"),
-  preProcess = c("center", "scale")
-)
-
-# Confusion matrix
-getTrainPerf(nb)
-
-approx_roc_curve(nb, "Naive Bayes") %>%
-  ggplot(aes(x = 1 - specificity, y = sensitivity)) +
-  geom_path()  +
-  geom_abline(col = "red", alpha = .5)
-
-nb_imp <- varImp(nb, scale = FALSE, 
-                 surrogates = FALSE, 
-                 competes = FALSE)
-
-pdf("output/nb_var_imp.pdf")
-ggplot(nb_imp, top = 7) + xlab("")
-dev.off()
-
-saveRDS(nb, "data/model_comparisons/nb_small_subst_group_20190204.rds")
-nb_ml <- readRDS("data/model_comparisons/nb_small_subst_group_20190204.rds")
-nb_pred <- predict(nb_ml, newdata = form_test)
-warnings()
-cm_nb <- confusionMatrix(nb_pred, as.factor(dat_test$clf))
-cm_nb
-sink("data/model_comparisons/cm_nb_15aa_functional_class_20190204.txt")
-cm_nb
-sink()
-
-dtl_feat_select <- data.frame(round(cm_nb$byClass[,colnames(cm_nb$byClass) %in% c("Precision", "Recall", "Balanced Accuracy")], 2))
-write.csv(dtl_feat_select, "data/model_comparisons/nb_AA34_Precision_Recall_Accuracy_Substrate_group.csv", row.names = T)
-
-## Make a heatmap of confusion matrix results
-cm_list <- list(cm_nb$table)
-names(cm_list) <- c("nb_aa_34")
-
-pllist <- list()
-for(i in 1:length(cm_list)) {
-  pllist[[i]] <- ggplot(data.frame(cm_list[[i]]), aes(Prediction, Reference)) +
-    geom_tile(aes(fill = Freq)) + 
-    geom_text(aes(label = round(Freq, 1))) +
-    scale_fill_gradient(low = "white", high = "red") +
-    ggtitle(names(cm_list)[i]) +
-    theme(axis.text.x = element_text(angle = 90), 
-          axis.title.x = element_blank())
-}
-
-pllist[[1]]
-ggsave("data/model_comparisons/aa34_nb_conf_matrices_subst_grp_20190204.jpeg", height=7, width=7, units='in')
+ggsave("data/model_comparisons/aa34_rf_conf_matrices_subst_grp_20192604.jpeg", height=7, width=7, units='in')
 
 
 ###==================================================================###
@@ -263,8 +251,8 @@ nnet_mod <- train(
 getTrainPerf(nnet_mod)
 # confusionMatrix(nnet_mod)
 
-saveRDS(nnet_mod, "data/model_comparisons/nnet_small_subst_group_20190204.rds")
-nnet_ml <- readRDS("data/model_comparisons/nnet_small_subst_group_20190204.rds")
+saveRDS(nnet_mod, "data/model_comparisons/nnet_small_subst_group_20192604.rds")
+nnet_ml <- readRDS("data/model_comparisons/nnet_small_subst_group_20192604.rds")
 nnet_ml$bestTune
 nnet_ml$call
 # size decay
@@ -279,7 +267,7 @@ nnet_pred <- predict(nnet_ml, newdata = form_test)
 cm_nnet <- confusionMatrix(nnet_pred, as.factor(dat_test$clf))
 cm_nnet
 
-sink("data/model_comparisons/cm_nnet_15aa_functional_class_20190204.txt")
+sink("data/model_comparisons/cm_nnet_15aa_functional_class_20192604.txt")
 cm_nnet
 sink()
 
@@ -302,7 +290,7 @@ for(i in 1:length(cm_list)) {
 }
 
 pllist[[1]]
-ggsave("data/model_comparisons/aa34_nnet_conf_matrices_subst_grp_20190204.jpeg", height=7, width=7, units='in')
+ggsave("data/model_comparisons/aa34_nnet_conf_matrices_subst_grp_20192604.jpeg", height=7, width=7, units='in')
 
 
 ###==================================================================###
@@ -325,14 +313,14 @@ svm_radial <- train(
 # Confusion matrix
 getTrainPerf(svm_radial)
 svm_radial$bestTune
-saveRDS(svm_radial, "data/model_comparisons/svm_radial_xvalidated_small_subst_grp_20190204.rds")
+saveRDS(svm_radial, "data/model_comparisons/svm_radial_xvalidated_small_subst_grp_20192604.rds")
 
 approx_roc_curve(svm_radial, "SVM Radial") %>%
   ggplot(aes(x = 1 - specificity, y = sensitivity)) +
   geom_path()  +
   geom_abline(col = "red", alpha = .5)
 
-pdf("data/model_comparisons/svm_radial_feat_select_var_imp_small_subst_group_20190204.pdf", width = 6, height = 6)
+pdf("data/model_comparisons/svm_radial_feat_select_var_imp_small_subst_group_20192604.pdf", width = 6, height = 6)
 ggplot(data = vimp, 
        aes(x=reorder(variable,importance), y=importance, fill=importance))+ 
   geom_bar(stat="identity", position="dodge")+ coord_flip()+
@@ -345,7 +333,7 @@ dev.off()
 cm_svm_radial_pred <- predict(svm_radial, newdata = form_test)
 cm_svm_radial <- confusionMatrix(svm_radial_pred, as.factor(dat_test$clf))
 
-sink("data/model_comparisons/cm_nnet_15aa_functional_class_20190204.txt")
+sink("data/model_comparisons/cm_nnet_15aa_functional_class_20192604.txt")
 cm_nnet
 sink()
 dtl_feat_select <- data.frame(round(cm_svm_radial$byClass[,colnames(cm_svm_radial$byClass) %in% c("Precision", "Recall", "Balanced Accuracy")], 2))
@@ -367,7 +355,7 @@ for(i in 1:length(cm_list)) {
 }
 
 pllist[[1]]
-ggsave("data/aa34_svm_radial_conf_matrices_subst_grp_20190204.jpeg", height=7, width=7, units='in')
+ggsave("data/aa34_svm_radial_conf_matrices_subst_grp_20192604.jpeg", height=7, width=7, units='in')
 
 ###==================================================================###
 ###SVM Linear kernel
@@ -390,14 +378,14 @@ svm_linear <- train(
 
 # Confusion matrix
 getTrainPerf(svm_linear)
-saveRDS(svm_linear, "data/model_comparisons/svm_linear_xvalidated_small_subst_grp_20190204.rds")
+saveRDS(svm_linear, "data/model_comparisons/svm_linear_xvalidated_small_subst_grp_20192604.rds")
 
 approx_roc_curve(svm_linear, "SVM Linear") %>%
   ggplot(aes(x = 1 - specificity, y = sensitivity)) +
   geom_path()  +
   geom_abline(col = "red", alpha = .5)
 
-pdf("data/model_comparisons/svm_radial_feat_select_var_imp_small_subst_group_20190204.pdf", width = 6, height = 6)
+pdf("data/model_comparisons/svm_radial_feat_select_var_imp_small_subst_group_20192604.pdf", width = 6, height = 6)
 ggplot(data = vimp, 
        aes(x=reorder(variable,importance), y=importance, fill=importance))+ 
   geom_bar(stat="identity", position="dodge")+ coord_flip()+
@@ -410,7 +398,7 @@ dev.off()
 cm_svm_radial_pred <- predict(svm_radial, newdata = form_test)
 cm_svm_radial <- confusionMatrix(svm_radial_pred, as.factor(dat_test$clf))
 
-sink("data/model_comparisons/cm_nnet_15aa_functional_class_20190204.txt")
+sink("data/model_comparisons/cm_nnet_15aa_functional_class_20192604.txt")
 cm_nnet
 sink()
 dtl_feat_select <- data.frame(round(cm_svm_radial$byClass[,colnames(cm_svm_radial$byClass) %in% c("Precision", "Recall", "Balanced Accuracy")], 2))
@@ -432,7 +420,7 @@ for(i in 1:length(cm_list)) {
 }
 
 pllist[[1]]
-ggsave("data/aa34_svm_radial_conf_matrices_subst_grp_20190204.jpeg", height=7, width=7, units='in')
+ggsave("data/aa34_svm_radial_conf_matrices_subst_grp_20192604.jpeg", height=7, width=7, units='in')
 
 ##  Compare all confusion matrices
 cm_list <- list(cm_rf$table,
@@ -511,14 +499,14 @@ svm_linear <- train(
 
 # Confusion matrix
 getTrainPerf(svm_linear)
-saveRDS(svm_linear, "data/model_comparisons/svm_linear_xvalidated_small_subst_grp_20190204.rds")
+saveRDS(svm_linear, "data/model_comparisons/svm_linear_xvalidated_small_subst_grp_20192604.rds")
 
 approx_roc_curve(svm_linear, "SVM Linear") %>%
   ggplot(aes(x = 1 - specificity, y = sensitivity)) +
   geom_path()  +
   geom_abline(col = "red", alpha = .5)
 
-pdf("data/model_comparisons/svm_linear_feat_select_var_imp_small_subst_group_20190204.pdf", width = 6, height = 6)
+pdf("data/model_comparisons/svm_linear_feat_select_var_imp_small_subst_group_20192604.pdf", width = 6, height = 6)
 ggplot(data = vimp, 
        aes(x=reorder(variable,importance), y=importance, fill=importance))+ 
   geom_bar(stat="identity", position="dodge")+ coord_flip()+
@@ -531,7 +519,7 @@ dev.off()
 cm_svm_linear_pred <- predict(svm_linear, newdata = form_test)
 cm_svm_radial <- confusionMatrix(svm_radial_pred, as.factor(dat_test$clf))
 
-sink("data/model_comparisons/cm_nnet_15aa_functional_class_20190204.txt")
+sink("data/model_comparisons/cm_nnet_15aa_functional_class_20192604.txt")
 cm_nnet
 sink()
 dtl_feat_select <- data.frame(round(cm_svm_radial$byClass[,colnames(cm_svm_radial$byClass) %in% c("Precision", "Recall", "Balanced Accuracy")], 2))
@@ -553,5 +541,5 @@ for(i in 1:length(cm_list)) {
 }
 
 pllist[[1]]
-ggsave("data/aa34_svm_linear_conf_matrices_subst_grp_20190204.jpeg", height=7, width=7, units='in')
+ggsave("data/aa34_svm_linear_conf_matrices_subst_grp_20192604.jpeg", height=7, width=7, units='in')
 

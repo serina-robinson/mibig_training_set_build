@@ -6,7 +6,7 @@ setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")
 
 # Read in the data
 rawdat <- read_csv("data/1742_seqs_510_feats_scaled_20190904.csv")
-rawdat <- data.frame(cbind(rawdat$X1), scale(rawdat[,2:ncol(rawdat)]), stringsAsFactors = F)
+# rawdat <- data.frame(cbind(rawdat$X1), scale(rawdat[,2:ncol(rawdat)]), stringsAsFactors = F)
 colnames(rawdat)[1] <- "nms"
 rawdat$clf <- word(rawdat$nms, -3, sep = "_")
 table(rawdat$clf)
@@ -49,7 +49,7 @@ rfprob <- readRDS('data/20190904_model_comparisons/rf_probability_ranger_2019090
 # Rf prob
 rfprob_pred <- predict(rfprob, data = form_test)
 
-rowSums(rfprob$predictions)
+rowSums(rfprob_pred)
 dim(rfprob$predictions)
 length(as.character(y_test))
 
@@ -140,7 +140,8 @@ dev.off()
 
 
 # Look at other parameters
-rfmax$control
+rfmax <- readRDS("data/20190904_model_comparisons/rf_xvalidated_tuned_no_max_depth_20190904.rds")
+
 rfmax$results$AccuracySD
 rfmax_res <- rfmax$results %>%
   dplyr::select(mtry, splitrule, min.node.size, Accuracy, AccuracySD)

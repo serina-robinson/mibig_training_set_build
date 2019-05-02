@@ -54,12 +54,13 @@ fin_sampled <- do.call("rbind", lapply(1:length(fin_df), function(x) {fin_df[[x]
 
 finset <- comb2[as.character(fin_sampled$names.comb2.)] # 360 sequences to cluster with
 length(finset)
-writeXStringSet(finset, "data/360_randomly_sampled_class_reps.fasta")
+# writeXStringSet(finset, "data/360_randomly_sampled_class_reps.fasta")
 summary(width(finset))
 table(word(names(finset), sep = "_", -2))
 
 # Read in the seqs from cdhit
-cdhit <- readAAStringSet("data/cdhit50.fa")
+finset <- readAAStringSet("data/360_randomly_sampled_class_reps.fasta")
+cdhit <- readAAStringSet("data/cdhit40.fa")
 length(cdhit)
 
 # Combine with the 360 sequences

@@ -1,0 +1,45 @@
+Confusion Matrix and Statistics
+
+            Reference
+Prediction   ARYL BLS FAAL LACS LUCIFERASE MACS NRPS SACS VLACSBILE
+  ARYL         37   0    2    6          0    3    0    3         0
+  BLS           0  17    0    0          0    0    0    0         0
+  FAAL          0   0    9    0          0    1    0    0         0
+  LACS          0   0    0   12          0    0    0    0         2
+  LUCIFERASE    1   0    0    1          8    0    0    0         0
+  MACS          2   0    0    0          0    2    0    1         0
+  NRPS          2   0    0    0          0    0   36    0         0
+  SACS          1   0    0    2          0    0    0    9         1
+  VLACSBILE     0   0    0    1          0    0    0    1         7
+
+Overall Statistics
+                                          
+               Accuracy : 0.8204          
+                 95% CI : (0.7536, 0.8754)
+    No Information Rate : 0.2575          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.7844          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: ARYL Class: BLS Class: FAAL Class: LACS Class: LUCIFERASE Class: MACS Class: NRPS
+Sensitivity               0.8605     1.0000     0.81818     0.54545           1.00000     0.33333      1.0000
+Specificity               0.8871     1.0000     0.99359     0.98621           0.98742     0.98137      0.9847
+Pos Pred Value            0.7255     1.0000     0.90000     0.85714           0.80000     0.40000      0.9474
+Neg Pred Value            0.9483     1.0000     0.98726     0.93464           1.00000     0.97531      1.0000
+Prevalence                0.2575     0.1018     0.06587     0.13174           0.04790     0.03593      0.2156
+Detection Rate            0.2216     0.1018     0.05389     0.07186           0.04790     0.01198      0.2156
+Detection Prevalence      0.3054     0.1018     0.05988     0.08383           0.05988     0.02994      0.2275
+Balanced Accuracy         0.8738     1.0000     0.90589     0.76583           0.99371     0.65735      0.9924
+                     Class: SACS Class: VLACSBILE
+Sensitivity              0.64286          0.70000
+Specificity              0.97386          0.98726
+Pos Pred Value           0.69231          0.77778
+Neg Pred Value           0.96753          0.98101
+Prevalence               0.08383          0.05988
+Detection Rate           0.05389          0.04192
+Detection Prevalence     0.07784          0.05389
+Balanced Accuracy        0.80836          0.84363

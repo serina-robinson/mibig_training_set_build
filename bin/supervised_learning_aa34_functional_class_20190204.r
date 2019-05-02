@@ -53,7 +53,7 @@ table(rawdat$clf)
 # Remove the holdout test predictions
 
 # Set seed 
-set.seed(20190304)
+f
 
 # Split into test and training data
 dat_split <- initial_split(dat, strata = "clf")

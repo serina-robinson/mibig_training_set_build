@@ -1,8 +1,8 @@
 convert_seq_15aap <- function (x) 
 {
-  tmpfin <- read.csv("data/15_aa_properties_scaled.csv", stringsAsFactors = F) %>%
+  tmpfin <- read.csv("data/15_aa_centered_scaled.csv", stringsAsFactors = F) %>%
     column_to_rownames(var = "AA_ABREV")
-
+  head(tmpfin)
   aalist <- list()
   for(i in 1:nrow(tmpfin)) {
     aalist[[i]] <- as.numeric(dplyr::slice(tmpfin, i))
@@ -90,3 +90,4 @@ convert_seq_15aap <- function (x)
   }
   return(ans)
 }
+
