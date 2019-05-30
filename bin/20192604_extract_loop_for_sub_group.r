@@ -1,6 +1,11 @@
 # Install packages
-pacman::p_load("DECIPHER", "plot3D", "plot3Drgl", "ade4", "data.table",
-               "phangorn", "cowplot", "RColorBrewer", "phylobase", "treeio", "ggtree", "Biostrings", "readxl", "tidyverse", "gtools", "rentrez")
+# pacman::p_load("DECIPHER", "plot3D", "plot3Drgl", "ade4", "data.table",
+#                "phangorn", "cowplot", "RColorBrewer", "phylobase", "treeio", "ggtree", "Biostrings", "readxl", "tidyverse", "gtools", "rentrez")
+# 
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("Biostrings")
+pacman::p_load("tidyverse", "Biostrings")
 
 # Set working directory
 setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")

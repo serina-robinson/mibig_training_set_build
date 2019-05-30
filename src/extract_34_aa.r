@@ -39,14 +39,9 @@ extract_34_aa <- function(query_fil) {
     substr(query_aln, new_34inds[x], new_34inds[x]) })))
   seqstr <- AAStringSet(paste0(query_pos, collapse = ""))
   names(seqstr) <- names(query)
- # writeXStringSet(seqstr, "output/last6251_antismashv2_unclustered_34aa_extracted.faa", append = T)
-  # writeXStringSet(seqstr, "output/tempfile_functional_class_34aa_extracted.faa", append = T)
-  
+  # writeXStringSet(seqstr, "output/20192305_MUSCLE_34aa_extracted.faa", append = T)
+
   feats <- convert_seq_15aap(query_pos)
-  
-  # Center and scale
-  # feats_scaled <- scale(feats, center = T)
-  # names(feats_scaled) <- colnames(feats)
   return(feats)
 }
 

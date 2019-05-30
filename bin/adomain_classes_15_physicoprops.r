@@ -1,6 +1,4 @@
-## Install packages
-pacman::p_load('ape', 'dendextend', 'rgl', 'cluster', 'ggrepel', 'plotly', 'tidyverse', 'data.table', 'readxl', 'stringr', 'Biostrings', 'DECIPHER', 'phangorn', 'ggplot2', 'seqinr', 'bgafun')
-
+Zo
 # Set working directory
 setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")
 

@@ -39,8 +39,10 @@ classwts <- nrow(dat)/(length(unique(dat$clf)) * table(dat$clf))
 classwts
 dtf <- data.frame(cbind(table(dat$clf), classwts))
 colnames(dtf) <- c("class_size", "class_weights")
-# write.csv(dtf, "output/small_sub_grp_class_sizes_and_weights.csv", quote = F, row.names = T)
 
+# writev(dtf, "output/small_sub_grp_class_sizes_and_weights.csv", quote = F, row.names = T)
+
+### Try it with max depth 15 and tune grid determined
 tunegrid <- expand.grid(.splitrule = "gini", .mtry = as.integer(sqrt(ncol(x_train))), .min.node.size = 1)
 
 rf_weighted <- caret::train(
@@ -57,19 +59,45 @@ rf_weighted <- caret::train(
   max.depth = 15,
   class.weights = classwts,
   importance = "permutation")
-getTrainPerf(rf_weighted) 
+getTrainPerf(rf_weighted)
 
-rf_wt_pred <- predict(rf_weighted, newdata = form_test)
+rf_15_wtd <- rf_weighted
+saveRDS(rf_15_wtd, "data/20190305_rf_models/rf_15_wtd_small_sub_grp.rds")
+rf_wt_pred <- predict(rf_15_wtd, newdata = form_test)
+rf_wt_pred
 cm_rf <- confusionMatrix(rf_wt_pred, as.factor(dat_test$clf))
-cm_rf$table
+cm_rf
+### Try it with max depth 20 and no tune grid
+# tunegrid <- expand.grid(.splitrule = "gini", .mtry = as.integer(sqrt(ncol(x_train))), .min.node.size = 1)
 
+rf_20_wtd <- caret::train(
+  x = x_train,
+  y = y_train,
+  method = "ranger",
+  trControl = trainControl(method = "repeatedcv", number = 10,
+                           repeats = 3,
+                           verboseIter = T, classProbs = T,
+                           savePredictions = "final"),
+  num.trees = 1000,
+  verbose = TRUE,
+  max.depth = 20,
+  class.weights = classwts,
+  importance = "permutation")
+getTrainPerf(rf_20_wtd)
+saveRDS(rf_20_wtd, "data/20190305_rf_models/rf_20_wtd_small_sub_grp.rds")
+             
+rf_wt_pred <- predict(rf_20_wtd, newdata = form_test)
+cm_rf <- confusionMatrix(rf_wt_pred, as.factor(dat_test$clf))
+cm_rf
 dtl_feat_select <- data.frame(round(cm_rf$byClass[,colnames(cm_rf$byClass) %in% c("Precision", "Recall", "F1", "Balanced Accuracy")], 2))
 dtl_feat_select[order(dtl_feat_select$F1),]
 
 # write.csv(dtl_feat_select, "data/model_comparisons/rf_15_AA34_Precision_Recall_Accuracy_Functional_class_2012604_weighted.csv", row.names = T)
 
+
 ###########
-rf <- caret::train(
+# RF 20 unweighted
+rf_20_unwtd <- caret::train(
   x = x_train,
   y = y_train,
   method = "ranger",
@@ -83,7 +111,7 @@ rf <- caret::train(
   max.depth = 20,
   # class.weights = classwts,
   importance = "permutation")
-getTrainPerf(rf)
+getTrainPerf(rf_20_unwtd)
 
 rf_pred <- predict(rf, newdata = form_test)
 cm_rf <- confusionMatrix(rf_pred, as.factor(dat_test$clf))
