@@ -30,7 +30,7 @@ rdaln <- read.alignment(file = 'data/1742_aa34_signatures_20190104.fa', format =
 rdaln$seq <- toupper(rdaln$seq)
 
 source("src/convert_aln_15aap.r")
-aa <- convert_aln_15aap(rdaln) #5 physicochemical properties
+aa <- convert_aln_15aap(rdaln) #15 physicochemical properties
 aadf <- data.frame(aa,stringsAsFactors = F)
 
 # Write to CSV file

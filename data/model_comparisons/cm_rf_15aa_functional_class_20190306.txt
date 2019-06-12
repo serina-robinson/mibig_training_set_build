@@ -1,0 +1,52 @@
+Confusion Matrix and Statistics
+
+                                 Reference
+Prediction                        bulky.mainly.phenyl.derivatives cyclic.aliphatic cysteine polar.and.charged small.hydrophilic
+  bulky.mainly.phenyl.derivatives                              36                1        1                 3                 2
+  cyclic.aliphatic                                              0               12        0                 0                 2
+  cysteine                                                      1                0        6                 0                 0
+  polar.and.charged                                             6                1        0                42                 2
+  small.hydrophilic                                             0                0        0                 1                26
+  small.hydrophobic                                             0                4        0                 0                 3
+  tiny                                                          0                0        0                 0                 0
+                                 Reference
+Prediction                        small.hydrophobic tiny
+  bulky.mainly.phenyl.derivatives                 3    0
+  cyclic.aliphatic                                1    0
+  cysteine                                        0    0
+  polar.and.charged                               2    0
+  small.hydrophilic                               1    0
+  small.hydrophobic                              35    0
+  tiny                                            0   13
+
+Overall Statistics
+                                         
+               Accuracy : 0.8333         
+                 95% CI : (0.775, 0.8817)
+    No Information Rate : 0.2255         
+    P-Value [Acc > NIR] : < 2.2e-16      
+                                         
+                  Kappa : 0.7958         
+                                         
+ Mcnemar's Test P-Value : NA             
+
+Statistics by Class:
+
+                     Class: bulky.mainly.phenyl.derivatives Class: cyclic.aliphatic Class: cysteine Class: polar.and.charged
+Sensitivity                                          0.8372                 0.66667         0.85714                   0.9130
+Specificity                                          0.9379                 0.98387         0.99492                   0.9304
+Pos Pred Value                                       0.7826                 0.80000         0.85714                   0.7925
+Neg Pred Value                                       0.9557                 0.96825         0.99492                   0.9735
+Prevalence                                           0.2108                 0.08824         0.03431                   0.2255
+Detection Rate                                       0.1765                 0.05882         0.02941                   0.2059
+Detection Prevalence                                 0.2255                 0.07353         0.03431                   0.2598
+Balanced Accuracy                                    0.8875                 0.82527         0.92603                   0.9217
+                     Class: small.hydrophilic Class: small.hydrophobic Class: tiny
+Sensitivity                            0.7429                   0.8333     1.00000
+Specificity                            0.9882                   0.9568     1.00000
+Pos Pred Value                         0.9286                   0.8333     1.00000
+Neg Pred Value                         0.9489                   0.9568     1.00000
+Prevalence                             0.1716                   0.2059     0.06373
+Detection Rate                         0.1275                   0.1716     0.06373
+Detection Prevalence                   0.1373                   0.2059     0.06373
+Balanced Accuracy                      0.8655                   0.8951     1.00000

@@ -1,0 +1,70 @@
+Confusion Matrix and Statistics
+
+                                 Reference
+Prediction                        bulky.mainly.phenyl.derivatives cyclic.aliphatic cysteine
+  bulky.mainly.phenyl.derivatives                              41                2        0
+  cyclic.aliphatic                                              0               14        0
+  cysteine                                                      1                0        6
+  polar.and.charged                                             2                0        1
+  small.hydrophilic                                             0                2        0
+  small.hydrophobic                                             0                2        0
+  tiny                                                          0                0        0
+                                 Reference
+Prediction                        polar.and.charged small.hydrophilic small.hydrophobic
+  bulky.mainly.phenyl.derivatives                 5                 2                 5
+  cyclic.aliphatic                                0                 0                 1
+  cysteine                                        0                 1                 0
+  polar.and.charged                              42                 1                 0
+  small.hydrophilic                               0                24                 1
+  small.hydrophobic                               0                 5                33
+  tiny                                            0                 0                 0
+                                 Reference
+Prediction                        tiny
+  bulky.mainly.phenyl.derivatives    2
+  cyclic.aliphatic                   0
+  cysteine                           0
+  polar.and.charged                  1
+  small.hydrophilic                  0
+  small.hydrophobic                  0
+  tiny                              10
+
+Overall Statistics
+                                         
+               Accuracy : 0.8333         
+                 95% CI : (0.775, 0.8817)
+    No Information Rate : 0.2304         
+    P-Value [Acc > NIR] : < 2.2e-16      
+                                         
+                  Kappa : 0.7955         
+                                         
+ Mcnemar's Test P-Value : NA             
+
+Statistics by Class:
+
+                     Class: bulky.mainly.phenyl.derivatives Class: cyclic.aliphatic
+Sensitivity                                          0.9318                 0.70000
+Specificity                                          0.9000                 0.99457
+Pos Pred Value                                       0.7193                 0.93333
+Neg Pred Value                                       0.9796                 0.96825
+Prevalence                                           0.2157                 0.09804
+Detection Rate                                       0.2010                 0.06863
+Detection Prevalence                                 0.2794                 0.07353
+Balanced Accuracy                                    0.9159                 0.84728
+                     Class: cysteine Class: polar.and.charged Class: small.hydrophilic
+Sensitivity                  0.85714                   0.8936                   0.7273
+Specificity                  0.98985                   0.9682                   0.9825
+Pos Pred Value               0.75000                   0.8936                   0.8889
+Neg Pred Value               0.99490                   0.9682                   0.9492
+Prevalence                   0.03431                   0.2304                   0.1618
+Detection Rate               0.02941                   0.2059                   0.1176
+Detection Prevalence         0.03922                   0.2304                   0.1324
+Balanced Accuracy            0.92350                   0.9309                   0.8549
+                     Class: small.hydrophobic Class: tiny
+Sensitivity                            0.8250     0.76923
+Specificity                            0.9573     1.00000
+Pos Pred Value                         0.8250     1.00000
+Neg Pred Value                         0.9573     0.98454
+Prevalence                             0.1961     0.06373
+Detection Rate                         0.1618     0.04902
+Detection Prevalence                   0.1961     0.04902
+Balanced Accuracy                      0.8912     0.88462
