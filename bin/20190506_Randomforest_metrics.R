@@ -12,6 +12,7 @@ colnames(rawdat)[1] <- "nms"
 rawdat$clf <- word(rawdat$nms, -1, sep = "_")
 table(rawdat$clf)
 
+
 # Remove the holdout test predictions
 dat <- rawdat[!grepl(paste0(c("HOLDOUT", "OTHER", "CAR", "amino.acid", "reject"), collapse = "|"), rawdat$clf),] # 658 observations
 table(dat$clf)
@@ -23,7 +24,7 @@ rf_pred <- list()
 dat_test <- list()
 rf_cm <- list()
 
-for(i in 1:10) {
+for(i in 1:3) {
   
   set.seed(i)
   
@@ -66,10 +67,11 @@ for (i in 1:length(rf_cm)) {
 }
 mean(unlist(xx))
 sd(unlist(xx))
-
+xx
 which.max(unlist(xx))
 
-dtf <- data.frame(rf_cm[[4]]$table)
+dtf <- data.frame(rf_cm[[1]]$table)
+
 
 
 # gsub("Udtf$Prediction

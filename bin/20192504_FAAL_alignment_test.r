@@ -12,8 +12,8 @@ faals <- comb %>%
 
 faal_sqs <- AAStringSet(faals$aa_seq)
 names(faal_sqs) <- faals$sqnams
-writeXStringSet(faal_sqs, "data/all_faals.fasta")
-writeXStringSet(faal_sqs[grep("FAA32_MYCTU", names(faal_sqs))], "data/myctu_faal32.fasta")
+# writeXStringSet(faal_sqs, "data/all_faals.fasta")
+# writeXStringSet(faal_sqs[grep("FAA32_MYCTU", names(faal_sqs))], "data/myctu_faal32.fasta")
 
 # Align the FAALs
 faal_aln <- AlignSeqs(faal_sqs)

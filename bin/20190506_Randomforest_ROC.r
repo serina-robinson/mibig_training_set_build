@@ -91,6 +91,7 @@ colnames(final_df) <- gsub("clf\\.", "", colnames(final_df))
 head(final_df)
 # roc_res <- multiclass.roc(final_df)
 head(final_df)
+
 colnames(final_df)
 # write.csv(final_df, quote = F, "output/predictions_for_multiROC_analysis.csv")
 roc_res <- multi_roc(final_df, force_diag=T)
@@ -98,8 +99,8 @@ roc_res <- multi_roc(final_df, force_diag=T)
 pr_res <- multi_pr(final_df, force_diag=T)
 # colnames(rf_pred) <- paste(colnames(rf_pred), "_pred_RF")
 
-plot_roc_df <- plot_roc_data(roc_res) %>%
-  dplyr::filter(!Group %in% c("Micro", "Macro"))
+plot_roc_df <- plot_roc_data(roc_res) #%>%
+ # dplyr::filter(!Group %in% c("Micro", "Macro"))
 
 table(plot_roc_df$Group)
 plot_pr_df <- plot_pr_data(pr_res)
@@ -121,7 +122,7 @@ pal2 <- c(pal1, "blue1", "gray68", "darkorchid1", "navy", #"black",
 palette(pal2)
 length(pal2)
 
-pdf("output/20190506_subst_spec_multiclass_AUROC_without_legend.pdf", width = 4, height = 4)
+pdf("output/20190506_subst_spec_multiclass_AUROC_without_legend_test.pdf", width = 4, height = 4)
 ggplot(plot_roc_df, aes(x = 1-Specificity, y=Sensitivity)) +
   geom_path(aes(color = Group), size = 1) +
   geom_segment(aes(x = 0, y = 0, xend = 1, yend = 1), 
@@ -144,7 +145,7 @@ roc_ci_res_micro <- roc_ci(final_df, conf= 0.95, type='basic', R = 100, index = 
 roc_ci_res_micro
 
 roc_ci_res_macro <- roc_ci(final_df, conf= 0.95, type='basic', R = 100, index = 1)
-roc_ci_res_macro$t0
+roc_ci_res_macro
 
 
 roc_auc_with_ci_res <- roc_auc_with_ci(final_df, conf= 0.95, type='basic', R = 100)

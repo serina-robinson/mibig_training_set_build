@@ -3,13 +3,13 @@ pacman::p_load("DECIPHER", "plot3D", "plot3Drgl", "ade4",
                "phangorn", "cowplot", "RColorBrewer", "phylobase", "treeio", "ggtree", "Biostrings", "readxl", "tidyverse", "gtools", "rentrez")
 
 # Set working directory
-setwd("~/Documents/Wageningen_UR/github/mibig_training_set_build_test/")
+setwd("~/Documents/Wageningen_UR/github/adenylpred_analysis/")
 
 # Set seed 
 set.seed(20190304)
 
 # Read in the full length sequences
-rawdat <- read_excel("../mibig_training_set_build_test/data/combined_adenylate_forming_training_set_for_db_20191404.xlsx") %>%
+rawdat <- read_excel("/data/combined_adenylate_forming_training_set_for_db_20191404.xlsx") %>%
   dplyr::filter(!functional_class %in% c("OTHER", "CAR")) %>%
   dplyr::filter(small_substrate_group != "unknown.other") %>%
   dplyr::mutate(org_clned = paste0(word(organism, 1, sep = " "), "_", word(organism, 2, sep = " "))) %>%
@@ -45,12 +45,11 @@ length(aa_dat)
 aa_grps <- readAAStringSet("data/sp2_34extract_names_fixed_large_grps.faa")
 names(aa_dat) <- names(aa_grps)
 
-# Sample 150 sequences at random
+# Sample 150 sequences at random to prevent proportional bias from NRPS A-domains
 ran_nums <- sample(1:length(aa_dat), 150, replace = F)
 aa_samp <- aa_dat[ran_nums]
 sqs <- aa_samp
 names(sqs) <- paste0("NRPS_NRPS_", names(sqs))
-
 
 # Extract the 34 amino acids AND loop 
 source("src/extract_34_aa_loop.r")

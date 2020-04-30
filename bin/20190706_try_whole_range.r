@@ -15,7 +15,7 @@ dedup <- aa34[!duplicated(aa34)]
 length(dedup) # 843
 
 
-writeXStringSet(dedup, "data/843_34extract_hmmalign.faa")
+# writeXStringSet(dedup, "data/843_34extract_hmmalign.faa")
 
 # # Only take the first 9 residues
 first9 <- AAStringSet(substr(dedup, 1, 9))
