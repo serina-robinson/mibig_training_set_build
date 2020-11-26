@@ -9,6 +9,7 @@ set.seed(20190403)
 
 # Read in the data
 rawdat <- read_csv("data/703_training_sqs_with_loop_extracted.csv")
+
 table(duplicated(rawdat[,2:ncol(rawdat)])) # check no duplicates
 colnames(rawdat)[1] <- "nms"
 head(rawdat)
